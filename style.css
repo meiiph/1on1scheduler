@@ -1,0 +1,149 @@
+* {
+    align-items: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url('bg4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    text-align: center;
+    justify-content: center;
+    }
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1 {
+    color: #7268a2;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 3em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: color 0.3s ease-in-out;
+    padding: 20px;
+}
+
+h1:hover {
+    color: #7d7993;
+}
+
+h2 {
+    color: #7268a2;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(76, 57, 100)
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+form {
+    max-width: 800%;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff7e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(96, 96, 96);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+form .login-button {
+    background-color: #3aa2d9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form .login-button:hover {
+    background-color: #8bc8e9;
+}
+
+form label,
+form input {
+    margin: 10px 0;
+    width: 100%;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    margin-bottom: 1px;
+    border-radius: 5px;
+    background-color: #ffffff7e;
+    border-color: #333;
+}
+
+nav {
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #39a4de;
+    margin: 0 10px;
+    padding: 4px 8px;
+    text-decoration: none;
+    background-color: transparent;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #77C3EC;
+}
+
+nav {
+    background-color: transparent;
+    padding: 10px;
+}
+
+.nav button:last-child {
+    border-right: none;
+}
+
+a {
+    color: #bb9274;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+a:hover {
+    color: #9c511b;
+}
