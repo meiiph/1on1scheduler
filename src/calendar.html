@@ -8,11 +8,11 @@
 <body>
     <table class="calendar"">
     <tr>
-        <th><a href="calendar_monthly.html">Monthly</a></th>
-        <th><a href="calendar.html">Weekly</a></th>
+        <th class="calendar_link"><a href="calendar_monthly.html"></a></th>
+        <th class="calendar_link"><a href="calendar.html"></a></th>
     </tr>
-    <tr>
-        <th></th>
+    <tr id="daysoftheweek">
+        <td rowspan="2" class="time" id="first_time">12:00 AM</th>
         <th>Monday</th>
         <th>Tuesday</th>
         <th>Wednesday</th>
@@ -22,7 +22,6 @@
         <th>Sunday</th>
     </tr>
     <tr>
-        <th>12:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -32,7 +31,7 @@
         <td></td>
     </tr>
     <tr>
-        <th>1:00 AM</th>
+        <td rowspan="2" class="time">1:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -42,7 +41,6 @@
         <td></td>
     </tr>
     <tr>
-        <th>2:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -52,7 +50,7 @@
         <td></td>
     </tr>
     <tr>
-        <th>3:00 AM</th>
+        <td rowspan="2" class="time">2:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -62,7 +60,6 @@
         <td></td>
     </tr>
     <tr>
-        <th>4:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -72,7 +69,7 @@
         <td></td>
     </tr>
     <tr>
-        <th>5:00 AM</th>
+        <td rowspan="2" class="time">3:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -82,7 +79,6 @@
         <td></td>
     </tr>
     <tr>
-        <th>6:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -92,7 +88,7 @@
         <td></td>
     </tr>
     <tr>
-        <th>7:00 AM</th>
+        <td rowspan="2" class="time">4:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -102,7 +98,6 @@
         <td></td>
     </tr>
     <tr>
-        <th>8:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -112,7 +107,7 @@
         <td></td>
     </tr>
     <tr>
-        <th>9:00 AM</th>
+        <td rowspan="2" class="time">5:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -122,7 +117,6 @@
         <td></td>
     </tr>
     <tr>
-        <th>10:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -132,7 +126,7 @@
         <td></td>
     </tr>
     <tr>
-        <th>11:00 AM</th>
+        <td rowspan="2" class="time">6:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -142,7 +136,6 @@
         <td></td>
     </tr>
     <tr>
-        <th>12:00 PM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -152,7 +145,7 @@
         <td></td>
     </tr>
     <tr>
-        <th>1:00 PM</th>
+        <td rowspan="2" class="time">7:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -162,7 +155,6 @@
         <td></td>
     </tr>
     <tr>
-        <th>2:00 PM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -172,7 +164,7 @@
         <td></td>
     </tr>
     <tr>
-        <th>3:00 PM</th>
+        <td rowspan="2" class="time">8:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -182,7 +174,6 @@
         <td></td>
     </tr>
     <tr>
-        <th>4:00 PM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -192,7 +183,7 @@
         <td></td>
     </tr>
     <tr>
-        <th>5:00 PM</th>
+        <td rowspan="2" class="time">9:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -202,7 +193,6 @@
         <td></td>
     </tr>
     <tr>
-        <th>6:00 PM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -212,7 +202,7 @@
         <td></td>
     </tr>
     <tr>
-        <th>7:00 PM</th>
+        <td rowspan="2" class="time">10:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -222,7 +212,6 @@
         <td></td>
     </tr>
     <tr>
-        <th>8:00 PM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -232,7 +221,7 @@
         <td></td>
     </tr>
     <tr>
-        <th>9:00 PM</th>
+        <td rowspan="2" class="time">11:00 AM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -242,7 +231,6 @@
         <td></td>
     </tr>
     <tr>
-        <th>10:00 PM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -252,7 +240,7 @@
         <td></td>
     </tr>
     <tr>
-        <th>11:00 PM</th>
+        <td rowspan="2" class="time">12:00 PM</th>
         <td></td>
         <td></td>
         <td></td>
@@ -262,7 +250,234 @@
         <td></td>
     </tr>
     <tr>
-        <th>12:00 AM</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="time">1:00 PM</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="time">2:00 PM</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="time">3:00 PM</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="time">4:00 PM</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="time">5:00 PM</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="time">6:00 PM</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="time">7:00 PM</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="time">8:00 PM</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="time">9:00 PM</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="time">10:00 PM</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="time">11:00 PM</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="time" id="last_time">12:00 AM</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr id="empty_row">
         <td></td>
         <td></td>
         <td></td>

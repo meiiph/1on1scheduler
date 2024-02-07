@@ -1,18 +1,47 @@
 body {
-    background-color: aqua;
+    background-color: rgb(243, 223, 223);
 }
 
 table {
     display: flex;
     border-collapse: collapse;
+    font-family:monospace;
 }
 
 td, th {
-    border: black 2px solid;
+    border: white 2px solid;
     width: 5rem;
     height: 5rem;
-    
 }
 
 
+.time {
+    vertical-align: center;
+    border: 0px;
+    
+}
 
+#empty_row td {
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#last_time {
+    padding-bottom: 10px;
+}
+
+.calendar_link {
+    border: 0px;
+}
+
+#first_time {
+    padding-top: 10px;
+}
+
+#daysoftheweek th{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    vertical-align: bottom;
+}
