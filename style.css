@@ -164,27 +164,6 @@ a:hover {
     color: #9c511b;
 }
 
-.contacts-container {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 50px;
-    padding: 25px;
-}
-
-.contact-card {
-    max-width: 800%;
-    width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff7e;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgb(96, 96, 96);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* align-items: start; */
-}
-
 #searchForm {
     max-width: 800%;
     width: 400px;
@@ -199,6 +178,45 @@ a:hover {
 
 #searchForm input {
     border: 1px white;
+}
+
+.contacts-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 50px;
+    padding: 25px;
+}
+
+.contact-card {
+    position: relative;
+    max-width: 800%;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff7e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(96, 96, 96);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* align-items: start; */
+}
+
+.contact-card a::before {
+    position: absolute;
+    content:"";
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin: 0;
+    padding:0;
+}
+
+.contact-card a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #7268a2; 
 }
 
 .contact-card p {
