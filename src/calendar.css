@@ -13,8 +13,8 @@ table {
 
 td, th {
     border: white 2px solid;
-    width: 3.5rem;
-    height: 2rem;
+    width: 3rem;
+    height: 1rem;
 }
 
 
@@ -53,4 +53,13 @@ td, th {
     font-weight: lighter;
     font-size: small;
     padding: 7px;
+}
+
+.available {
+    background-color: rgb(190, 188, 208);
+    border: 0px;
+}
+
+p {
+    font: monospace;
 }
