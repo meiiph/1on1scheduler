@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(223, 227, 243);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    display: flex;
+    border-collapse: collapse;
+    font-family:monospace;
+}
+
+td, th {
+    border: white 2px solid;
+    width: 3.5rem;
+    height: 2rem;
+}
+
+
+.time {
+    vertical-align: center;
+    border: 0px;
+    text-align: center;
+    font-size: 0.6rem;
+    
+    
+}
+
+#empty_row td {
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#last_time {
+    padding-bottom: 5px;
+}
+
+.calendar_link {
+    border: 0px;
+}
+
+#first_time {
+    padding-top: 18.5px;
+}
+
+#daysoftheweek th{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    vertical-align: bottom;
+    font-weight: lighter;
+    font-size: small;
+    padding: 7px;
+}
