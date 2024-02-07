@@ -1,0 +1,18 @@
+body {
+    background-color: aqua;
+}
+
+table {
+    display: flex;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: black 2px solid;
+    width: 5rem;
+    height: 5rem;
+    
+}
+
+
+
