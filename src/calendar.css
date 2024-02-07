@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(223, 227, 243);
+    background-color: rgb(209, 224, 238);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,6 +9,7 @@ table {
     display: flex;
     border-collapse: collapse;
     font-family:monospace;
+    margin-top: 3rem;
 }
 
 td, th {
@@ -51,15 +52,42 @@ td, th {
     border-right: 0px;
     vertical-align: bottom;
     font-weight: lighter;
-    font-size: small;
+    font-size: 0.8rem;
     padding: 7px;
+    letter-spacing: 1.5px;
 }
 
 .available {
-    background-color: rgb(190, 188, 208);
-    border: 0px;
+    background-color: #dcefd9;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-color: rgb(221, 237, 246);
 }
 
 p {
-    font: monospace;
+    font-family: monospace;
+    margin-top: 11px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.main_text {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    background-color: rgb(195, 207, 239);
+}
+
+button {
+    margin-top: 8px;
+    align-self: top;
+    border-radius: 10px;
+    background-color: rgb(231, 231, 255);
+    border-color: rgb(143, 155, 215);
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(105, 110, 128);
 }
