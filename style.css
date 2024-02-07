@@ -181,7 +181,12 @@ a:hover {
 }
 
 .contacts-container {
+    min-width: auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* justify-content: space-between; */
+    /* align-items: flex-start; */
     gap: 1.5rem;
     margin-bottom: 50px;
     padding: 25px;
