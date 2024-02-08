@@ -20,68 +20,78 @@
         <input type="text" id="searchInput" name="search_query" placeholder="Search for a user...">
     </form>
 
-    <button class="contacts-button" type="button">
-        <a href="login.html">Add New Contact</a>
-    </button>
+    <!-- <div class="contacts-back-button">
+        <button class="contacts-button" type="button">
+            <a href="contacts.html">Cancel</a>
+        </button>
+    </div> -->
 
-    <button class="contacts-button" type="button">
-        <a href="select_contacts.html">Select Contacts</a>
-    </button>
+    <form id="addContactForm" action="added_new_contact.html" method="post" enctype="multipart/form-data">
+        <!-- <input class="contacts-submit-button" type="submit" value="Add"> -->
 
-    <div class="contacts-container">
-        <div class="contact-card">
-            <form>
-                <label for="name"></label>
-                <input type="text" id="name" name="name" rows="1" cols="10" placeholder="Name" required>
-            </form>
+        <div class="contacts-container">
+            <div class="contact-card">
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" rows="1" cols="10" placeholder="Name" required>
+
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" rows="1" cols="10" placeholder="Email Address" required>
+
+                    <div class="contacts-buttons-container">
+                        <button class="contacts-add-button" type="button">
+                            <a href="contacts.html">Cancel</a>
+                        </button>
+                        
+                        <input class="contacts-add-button" type="submit" value="Add">
+                    </div>
+            </div>
+
+            <div class="contact-card">
+                <a href="contact_example.html">John Smith</a>
+                <p>john.smith@gmail.com</p>
+            </div>
+
+            <div class="contact-card">
+                <a href="profile.html">Mary Smith</a>
+                <p>mary.smith@gmail.com</p>
+            </div>
+
+            <div class="contact-card">
+                <a href="profile.html">Lily H.</a>
+                <p>lily.h@gmail.com</p>
+            </div>
+
+            <div class="contact-card">
+                <a href="profile.html">Tara</a>
+                <p>tara@gmail.com</p>
+            </div>
+
+            <div class="contact-card">
+                <a href="profile.html">Salome</a>
+                <p>salome@gmail.com</p>
+            </div>
+
+            <div class="contact-card">
+                <a href="profile.html">Nancy</a>
+                <p>nancy@gmail.com</p>
+            </div>
+            
+            <div class="contact-card">
+                <a href="profile.html">Irene</a>
+                <p>irene@gmail.com</p>
+            </div>
+
+            <div class="contact-card">
+                <a href="profile.html">Khai</a>
+                <p>khai@gmail.com</p>
+            </div>
+
+            <div class="contact-card">
+                <a href="profile.html">Susan</a>
+                <p>susan@gmail.com</p>
+            </div>
         </div>
-
-        <div class="contact-card">
-            <a href="contact_example.html">John Smith</a>
-            <p>john.smith@gmail.com</p>
-        </div>
-
-        <div class="contact-card">
-            <a href="profile.html">Mary Smith</a>
-            <p>mary.smith@gmail.com</p>
-        </div>
-
-        <div class="contact-card">
-            <a href="profile.html">Lily H.</a>
-            <p>lily.h@gmail.com</p>
-        </div>
-
-        <div class="contact-card">
-            <a href="profile.html">Tara</a>
-            <p>tara@gmail.com</p>
-        </div>
-
-        <div class="contact-card">
-            <a href="profile.html">Salome</a>
-            <p>salome@gmail.com</p>
-        </div>
-
-        <div class="contact-card">
-            <a href="profile.html">Nancy</a>
-            <p>nancy@gmail.com</p>
-        </div>
-        
-        <div class="contact-card">
-            <a href="profile.html">Irene</a>
-            <p>irene@gmail.com</p>
-        </div>
-
-        <div class="contact-card">
-            <a href="profile.html">Khai</a>
-            <p>khai@gmail.com</p>
-        </div>
-
-        <div class="contact-card">
-            <a href="profile.html">Susan</a>
-            <p>susan@gmail.com</p>
-        </div>
-    </div>
-
+    <form>
 </body>
 
 </html>
