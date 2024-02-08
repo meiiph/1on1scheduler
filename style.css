@@ -587,3 +587,34 @@ border-radius: 20px;
     right: 10px;
     cursor: pointer;
   }
+
+.status p {
+    color: #FFFFFF;
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+
+.status h3 {
+    color: #e0b1cb;
+    margin-top: 2rem;
+}
+
+.status a {
+    color: #5e548e;
+    text-decoration: underline;
+    background-color: #9dd9f3;
+    border-radius: 20px;
+    margin: 8px;
+}
+
+.status a:hover {
+    color: #007bff;
+    background-color: #b8e2f2;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.status {
+    color: #c5beea;
+    margin: 1rem;
+}
