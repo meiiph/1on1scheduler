@@ -9,3 +9,5 @@ openPopupButton.addEventListener('click', () => {
 closePopupButton.addEventListener('click', () => {
   popup.style.display = 'none';
 });
+
+
