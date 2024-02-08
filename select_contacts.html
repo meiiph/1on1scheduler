@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.ico">
+    <title>Contacts</title>
+</head>
+
+<body>
+    <nav>
+        <a class="logo" href="home.html">1on1 Scheduler</a>
+        <a href="profile.html">Profile</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="calendar.html">Calendars</a>
+        <a href="login.html">Logout</a>
+    </nav>
+    <h2>Contacts</h2>
+
+    <form id="searchForm" method="GET">
+        <input type="text" id="searchInput" name="search_query" placeholder="Search for a user...">
+    </form>
+
+    <div class="contacts-back-button">
+        <button class="contacts-button" type="button">
+            <a href="contacts.html">Back</a>
+        </button>
+    </div>
+
+    <form action="delete_selected_contacts.html" method="post" enctype="multipart/form-data">
+        <input class="contacts-submit-button" type="submit" value="Delete Selected Contacts">
+
+        <div class="contacts-container">
+            <div class="contact-card">
+                <label class="lbl" for="attachments">
+                    <p>John Smith</p>
+                    <p>john.smith@gmail.com</p>
+                </label>
+                <input class="chkbox-contact" type="checkbox" id="delete-contacts" name="delete-contacts" value="john">
+            </div>
+
+            <div class="contact-card">
+                <label class="lbl" for="attachments">
+                    <p>Mary Smith</p>
+                    <p>mary.smith@gmail.com</p>
+                </label>
+                <input class="chkbox-contact" type="checkbox" id="delete-contacts" name="delete-contacts" value="john">
+            </div>
+
+            <div class="contact-card">
+                <label class="lbl" for="attachments">
+                    <p>Lily H.</p>
+                    <p>lily.h@gmail.com</p>
+                </label>
+                <input class="chkbox-contact" type="checkbox" id="delete-contacts" name="delete-contacts" value="john">
+            </div>
+
+            <div class="contact-card">
+                <label class="lbl" for="attachments">
+                    <p>Tara</p>
+                    <p>tara@gmail.com</p>
+                </label>
+                <input class="chkbox-contact" type="checkbox" id="delete-contacts" name="delete-contacts" value="john">
+            </div>
+
+            <div class="contact-card">
+                <label class="lbl" for="attachments">
+                    <p>Salome</p>
+                    <p>salome@gmail.com</p>
+                </label>
+                <input class="chkbox-contact" type="checkbox" id="delete-contacts" name="delete-contacts" value="john">
+            </div>
+
+            <div class="contact-card">
+                <label class="lbl" for="attachments">
+                    <p>Nancy</p>
+                    <p>nancy@gmail.com</p>
+                </label>
+                <input class="chkbox-contact" type="checkbox" id="delete-contacts" name="delete-contacts" value="john">
+            </div>
+            
+            <div class="contact-card">
+                <label class="lbl" for="attachments">
+                    <p>Irene</p>
+                    <p>irene@gmail.com</p>
+                </label>
+                <input class="chkbox-contact" type="checkbox" id="delete-contacts" name="delete-contacts" value="john">
+            </div>
+
+            <div class="contact-card">
+                <label class="lbl" for="attachments">
+                    <p>Khai</p>
+                    <p>khai@gmail.com</p>
+                </label>
+                <input class="chkbox-contact" type="checkbox" id="delete-contacts" name="delete-contacts" value="john">
+            </div>
+
+            <div class="contact-card">
+                <label class="lbl" for="attachments">
+                    <p>Susan</p>
+                    <p>susan@gmail.com</p>
+                </label>
+                <input class="chkbox-contact" type="checkbox" id="delete-contacts" name="delete-contacts" value="john">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

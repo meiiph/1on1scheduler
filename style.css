@@ -240,6 +240,10 @@ a:hover {
     transition: background-color 0.3s ease-in-out;
 }
 
+.contacts-back-button {
+    margin: 0.5rem;
+}
+
 .contacts-button a::before {
     position: absolute;
     content:"";
@@ -251,8 +255,44 @@ a:hover {
     padding:0;
 }
 
+
 .contacts-button a {
     margin: 0;
     padding:0;
     color: #fff;
+}
+
+.contacts-submit-button {
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    background-color: #3aa2d9;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 20%;
+    color: white;
+}
+
+.chkbox-contact {
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    background: #FFF;
+    justify-self: right;
+    margin: 14px;
+    margin-top: 2px;
+}
+
+.contact-card .chkbox-contact::before{
+    position: absolute;
+    content:"";
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin: 0;
+    padding:0;
 }
