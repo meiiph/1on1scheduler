@@ -346,6 +346,10 @@ border-radius: 20px;
     color: white;
 }
 
+#addContactForm input{
+    color: white;
+}
+
 #addContactForm input#name, input#email{
     color: black;
 }

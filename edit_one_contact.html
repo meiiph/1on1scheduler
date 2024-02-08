@@ -23,7 +23,7 @@
         <a href="select_contacts.html">Select Contacts</a>
     </button>
 
-    <form id="addContactForm" action="contacts.html" method="post" enctype="multipart/form-data">
+    <form id="addContactForm" action="edit_contacts.html" method="post" enctype="multipart/form-data">
         <div class="contacts-container">
             <div class="contact-card">
                 <label for="name"></label>
@@ -37,8 +37,13 @@
                         <a href="edit_contacts.html">Cancel</a>
                     </button>
                     
-                    <input class="contacts-add-button" type="submit" value="Save">
+                    <input class="contacts-add-button" id="add" type="submit" value="Save">
                 </div>
+            </div>
+
+            <div class="contact-card">
+                <a>Alex Donald</a>
+                <p>alex.donald@gmail.com</p>
             </div>
     
             <div class="contact-card">
