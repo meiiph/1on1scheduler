@@ -615,6 +615,63 @@ button {
     cursor: pointer;
   }
 
+<<<<<<< HEAD
+.calendar {
+    display: flex;
+    border-collapse: collapse;
+    font-family:monospace;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+}
+
+td, th {
+    border: white 2px solid;
+    width: 3rem;
+    height: 1rem;
+}
+
+
+.time {
+    vertical-align: center;
+    border: 0px;
+    text-align: center;
+    font-size: 0.6rem;
+    
+    
+}
+
+#empty_row th {
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#last_time {
+    padding-bottom: 5px;
+}
+
+.calendar_link {
+    border: 0px;
+}
+
+#first_time {
+    padding-top: 18.5px;
+
+}
+
+#daysoftheweek th:not(#first_time){
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    vertical-align: bottom;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    padding: 7px;
+    letter-spacing: 1.5px;
+}
+=======
 .status p {
     color: #FFFFFF;
     margin: 1rem;
@@ -645,3 +702,4 @@ button {
     color: #c5beea;
     margin: 1rem;
 }
+>>>>>>> 5b0224b2962cc7b8e8de8cf86be66c5c3bec195c
