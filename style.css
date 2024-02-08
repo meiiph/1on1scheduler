@@ -615,7 +615,6 @@ button {
     cursor: pointer;
   }
 
-<<<<<<< HEAD
 .calendar {
     display: flex;
     border-collapse: collapse;
@@ -671,7 +670,6 @@ td, th {
     padding: 7px;
     letter-spacing: 1.5px;
 }
-=======
 .status p {
     color: #FFFFFF;
     margin: 1rem;
@@ -702,4 +700,3 @@ td, th {
     color: #c5beea;
     margin: 1rem;
 }
->>>>>>> 5b0224b2962cc7b8e8de8cf86be66c5c3bec195c
