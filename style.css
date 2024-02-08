@@ -45,6 +45,14 @@ h2 {
     transition: color 0.3s ease-in-out;
 }
 
+h3 {
+    color: #7268a2;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: color 0.3s ease-in-out;
+    margin: 20px;
+}
+
 label {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(76, 57, 100)
