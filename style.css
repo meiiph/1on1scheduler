@@ -8,7 +8,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background-image: url('bg4.jpg');
+    background-image: url('bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -225,6 +225,8 @@ a:hover {
     font-weight: bold;
     color: #7268a2; 
 }
+
+
 
 .home h3 {
 font-size: 20px;
@@ -519,169 +521,3 @@ border-radius: 20px;
     cursor: pointer;
   }
     
-  #openPopup {
-    background-color: #306c8c;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    box-shadow: 0 0 10px rgb(96, 96, 96);
-}
-
- #openPopup:hover {
-    background-color: #69a5c6;
-}
-  
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-  }
-
-
-  .popup-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  }
-
-  .popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .popup-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  .popup-content input[name="title"] {
-    border: none;
-    border-bottom: 2px solid rgb(70, 70, 70);
-  }
-
-  .popup-content input[name="title"]:hover {
-    background-color: rgb(224, 224, 224);
-    border: none;
-    border-bottom: 2px solid rgb(70, 70, 70);
-    border-radius: 4px;
-  }
-
-  .popup-content input[name="invitation-date"] {
-    border: none;
-    border-bottom: 0px solid rgb(70, 70, 70);
-  }
-
-  .popup-content input[name="invitation-date"]:hover {
-    background-color: rgb(224, 224, 224);
-    border: none;
-    border-bottom: 0px solid rgb(70, 70, 70);
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .popup-content input[name="appointment"] {
-    width: 75%;
-    height: 75%;
-    border:  0px;
-    border-radius: 4px;
-  }
-  .popup-content input[name="appointment"]:hover {
-    background-color: rgb(224, 224, 224);
-    border: none;
-    border-bottom: 0px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .popup-content input[name="email"] {
-    border:  0.5px solid rgba(70, 70, 70, 0.266);
-    border-radius: 4px;
-  }
-  .popup-content input[name="email"]:hover {
-    background-color: rgb(224, 224, 224);
-    border: none;
-    border-bottom: 0px;
-    border-radius: 4px;
-  }
-
-  .popup-content input[name="description"] {
-    border:  0.5px solid rgba(70, 70, 70, 0.266);
-    border-radius: 4px;
-    width: 100%;
-    height: 60px;
-  }
-  .popup-content input[name="description"]:hover {
-    background-color: rgb(224, 224, 224);
-    border: none;
-    border-bottom: 0px;
-    border-radius: 4px;
-  }
-
-  .popup-content label {
-    font-size: 12px;
-  }
-
-  .invitationForm {
-    max-width: 800%;
-    width: 350px;
-    height: 350;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff7e;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgb(96, 96, 96);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.invitationFormPage {
-  max-width: 800%;
-  width: 350px;
-  height: 350;
-  margin: 0 auto;
-  padding: 20px;
-  margin-bottom: 30px;
-  background-color: #ffffff7e;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgb(96, 96, 96);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  }
