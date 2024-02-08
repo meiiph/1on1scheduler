@@ -1,0 +1,151 @@
+/* body {
+    background-color: rgb(209, 224, 238);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.suggested-schedules-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+    margin-bottom: 25px;
+}
+
+/* .schedule-card {
+    position: relative;
+    max-width: 800%;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff7e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(96, 96, 96);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+table {
+    display: flex;
+    border-collapse: collapse;
+    font-family:monospace;
+}
+
+td, th {
+    border: white 2px solid;
+    width: 3rem;
+    height: 1rem;
+}
+
+
+.time {
+    vertical-align: center;
+    border: 0px;
+    text-align: center;
+    font-size: 0.6rem;
+    
+    
+}
+
+#empty_row th {
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#last_time {
+    padding-bottom: 5px;
+}
+
+.calendar_link {
+    border: 0px;
+}
+
+#first_time {
+    padding-top: 18.5px;
+
+}
+
+#daysoftheweek th:not(#first_time){
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    vertical-align: bottom;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    padding: 7px;
+    letter-spacing: 1.5px;
+}
+
+.available {
+    background-color: #e3f2e1;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-color: rgb(194, 206, 213);
+}
+
+p {
+    font-family: monospace;
+    margin-top: 11px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.main_text {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    background-color: rgb(195, 207, 239);
+}
+
+button {
+    margin-top: 8px;
+    align-self: top;
+    border-radius: 10px;
+    background-color: rgb(231, 231, 255);
+    border-color: rgb(143, 155, 215);
+    margin-right: 10px;
+}
+
+.disabled-button {
+    opacity: 25%;
+}
+
+#select_preferences td:not(.available){
+    background-color: rgba(249, 250, 250, 0.847);
+}
+
+#preference td:not(.available, .choice_a, .choice_b, .choice_c){
+    background-color: rgba(249, 250, 250, 0.847);
+}
+
+.choice_a {
+        background-color: #e3e5fb;
+        border-top: 0px;
+        border-bottom: 0px;
+        border-color: rgb(191, 211, 214);
+}
+
+.choice_b {
+        background-color: hsl(314, 88%, 93%);
+        border-top: 0px;
+        border-bottom: 0px;
+        border-color: rgb(211, 190, 229);
+}
+
+.choice_c {
+    background-color: #cbe5fa;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-color: rgb(231, 185, 203);
+}
+
+.prev-next-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}

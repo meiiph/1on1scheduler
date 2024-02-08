@@ -45,6 +45,14 @@ h2 {
     transition: color 0.3s ease-in-out;
 }
 
+h3 {
+    color: #7268a2;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: color 0.3s ease-in-out;
+    margin: 20px;
+}
+
 label {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(76, 57, 100)
@@ -178,6 +186,7 @@ a:hover {
 
 #searchForm input {
     border: 1px white;
+    color: black;
 }
 
 .contacts-container {
@@ -190,7 +199,7 @@ a:hover {
 
 .contact-card {
     position: relative;
-    max-width: 800%;
+    /* max-width: 800%; */
     width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -224,6 +233,7 @@ a:hover {
     font-size: 20px;
     font-weight: bold;
     color: #7268a2; 
+    width: 400px;
 }
 
 
@@ -324,6 +334,7 @@ border-radius: 20px;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 
+    font-weight: bold;
     background-color: #3aa2d9;
     padding: 10px 20px;
     border: none;
@@ -336,6 +347,35 @@ border-radius: 20px;
 
 #addContactForm input#name, input#email{
     color: black;
+}
+
+/* .contacts-select-contacts-button {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    background-color: #3aa2d9;
+    width: 300px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+} */
+
+button {
+    font-weight: bold;
+}
+
+.contacts-select-contacts-button a {
+    margin: 0;
+    padding:0;
+    color: #fff;
+    font-size: 20px;
 }
 
 .contacts-add-button {
@@ -386,13 +426,10 @@ border-radius: 20px;
     flex-direction: row;
     margin: 0.5rem;
     color: white;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
-
-/* .contacts-buttons-container button, input{
-    width: 100px;
-    margin: 0;
-    padding: 0;
-} */
 
 .chkbox-contact {
     border-radius: 3px;
@@ -580,4 +617,99 @@ border-radius: 20px;
     right: 10px;
     cursor: pointer;
   }
+
+
+.calendar {
+    display: flex;
+    border-collapse: collapse;
+    font-family:monospace;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+}
+
+td, th {
+    border: white 2px solid;
+    width: 3rem;
+    height: 1rem;
+}
+
+
+.time {
+    vertical-align: center;
+    border: 0px;
+    text-align: center;
+    font-size: 0.6rem;
     
+    
+}
+
+#empty_row th {
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#last_time {
+    padding-bottom: 5px;
+}
+
+.calendar_link {
+    border: 0px;
+}
+
+#first_time {
+    padding-top: 18.5px;
+
+}
+
+#daysoftheweek th:not(#first_time){
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    vertical-align: bottom;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    padding: 7px;
+    letter-spacing: 1.5px;
+}
+.status p {
+    color: #FFFFFF;
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+
+.status h3 {
+    color: #e0b1cb;
+    margin-top: 2rem;
+}
+
+.status a {
+    color: #5e548e;
+    text-decoration: underline;
+    background-color: #9dd9f3;
+    border-radius: 20px;
+    margin: 8px;
+}
+
+.status a:hover {
+    color: #007bff;
+    background-color: #b8e2f2;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.status {
+    color: #c5beea;
+    margin: 1rem;
+}
+
+
+/* @media only screen and (max-width: 391px){
+    .contacts-container {
+        max-width: 391px;
+    }
+
+} */
+
