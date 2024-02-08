@@ -28,7 +28,7 @@ td, th {
     
 }
 
-#empty_row td {
+#empty_row th {
     border-bottom: 0px;
     border-left: 0px;
     border-right: 0px;
@@ -44,9 +44,10 @@ td, th {
 
 #first_time {
     padding-top: 18.5px;
+
 }
 
-#daysoftheweek th{
+#daysoftheweek th:not(#first_time){
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
@@ -87,7 +88,31 @@ button {
     margin-right: 10px;
 }
 
-a {
-    text-decoration: none;
-    color: rgb(105, 110, 128);
+#select_preferences td:not(.available){
+    background-color: rgba(249, 250, 250, 0.847);
+}
+
+#preference td:not(.available, .choice_a, .choice_b, .choice_c){
+    background-color: rgba(249, 250, 250, 0.847);
+}
+
+.choice_a {
+        background-color: #e3e5fb;
+        border-top: 0px;
+        border-bottom: 0px;
+        border-color: rgb(191, 211, 214);
+}
+
+.choice_b {
+        background-color: hsl(314, 88%, 93%);
+        border-top: 0px;
+        border-bottom: 0px;
+        border-color: rgb(211, 190, 229);
+}
+
+.choice_c {
+    background-color: #cbe5fa;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-color: rgb(231, 185, 203);
 }
