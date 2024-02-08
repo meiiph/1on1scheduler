@@ -92,7 +92,7 @@ button {
     background-color: rgba(249, 250, 250, 0.847);
 }
 
-#first_preference td:not(.available, .choice_a, .choice_b){
+#preference td:not(.available, .choice_a, .choice_b, .choice_c){
     background-color: rgba(249, 250, 250, 0.847);
 }
 
@@ -108,4 +108,11 @@ button {
         border-top: 0px;
         border-bottom: 0px;
         border-color: rgb(211, 190, 229);
+}
+
+.choice_c {
+    background-color: #cbe5fa;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-color: rgb(231, 185, 203);
 }
