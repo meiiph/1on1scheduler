@@ -8,7 +8,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background-image: url('bg4.jpg');
+    background-image: url('bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -235,6 +235,8 @@ a:hover {
     color: #7268a2; 
     width: 400px;
 }
+
+
 
 .home h3 {
 font-size: 20px;
@@ -616,6 +618,7 @@ button {
     cursor: pointer;
   }
 
+
 .calendar {
     display: flex;
     border-collapse: collapse;
@@ -736,3 +739,4 @@ td, th {
     }
 
 } */
+
