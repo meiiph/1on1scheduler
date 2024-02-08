@@ -178,6 +178,7 @@ a:hover {
 
 #searchForm input {
     border: 1px white;
+    color: black;
 }
 
 .contacts-container {
