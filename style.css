@@ -199,7 +199,7 @@ a:hover {
 
 .contact-card {
     position: relative;
-    max-width: 800%;
+    /* max-width: 800%; */
     width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -233,6 +233,7 @@ a:hover {
     font-size: 20px;
     font-weight: bold;
     color: #7268a2; 
+    width: 400px;
 }
 
 .home h3 {
@@ -700,3 +701,11 @@ td, th {
     color: #c5beea;
     margin: 1rem;
 }
+
+
+/* @media only screen and (max-width: 391px){
+    .contacts-container {
+        max-width: 391px;
+    }
+
+} */
