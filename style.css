@@ -702,7 +702,34 @@ td, th {
     margin: 1rem;
 }
 
+.available {
+    background-color: #c7bddf;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-color: rgb(194, 206, 213);
+}
 
+.choose_button {
+    color: #5e548e;
+    text-decoration: underline;
+    background-color: #9dd9f3;
+    border-radius: 20px;
+    margin: 8px;}
+
+.choose_button:hover {
+    color: #007bff;
+    background-color: #b8e2f2;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.choose_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
 /* @media only screen and (max-width: 391px){
     .contacts-container {
         max-width: 391px;
