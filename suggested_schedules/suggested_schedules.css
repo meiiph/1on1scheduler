@@ -110,7 +110,7 @@ button {
 }
 
 .disabled-button {
-    opacity: 50%;
+    opacity: 25%;
 }
 
 #select_preferences td:not(.available){
