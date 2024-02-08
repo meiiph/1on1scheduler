@@ -181,12 +181,8 @@ a:hover {
 }
 
 .contacts-container {
-    min-width: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    /* justify-content: space-between; */
-    /* align-items: flex-start; */
     gap: 1.5rem;
     margin-bottom: 50px;
     padding: 25px;
@@ -283,4 +279,34 @@ border-radius: 20px;
 .home h2 {
     margin: 1rem;
     color: #c5beea;
+  
+.contacts-button {
+    position: relative;
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    background-color: #3aa2d9;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contacts-button a::before {
+    position: absolute;
+    content:"";
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin: 0;
+    padding:0;
+}
+
+.contacts-button a {
+    margin: 0;
+    padding:0;
+    color: #fff;
 }
