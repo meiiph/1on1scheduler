@@ -114,6 +114,7 @@ form input {
     border-radius: 5px;
     background-color: #ffffff7e;
     border-color: #333;
+    color: black;
 }
 
 nav {
@@ -342,6 +343,10 @@ border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     width: 20%;
+    color: white;
+}
+
+#addContactForm input{
     color: white;
 }
 
@@ -733,6 +738,7 @@ td, th {
     align-items: center;
     margin-top: -50px;
 }
+
 /* @media only screen and (max-width: 391px){
     .contacts-container {
         max-width: 391px;
