@@ -241,13 +241,13 @@ a:hover {
 .home h3 {
 font-size: 20px;
 margin: 1rem;
-color: #ffffff;
+color: #5e548e;
 }
 
 .home p {
 font-size: 20px;
 margin: 1rem;
-color: #ffffff; 
+color: #5e548e; 
 padding: 25px;
 }
 
@@ -290,7 +290,7 @@ border-radius: 20px;
 
 .home h2 {
     margin: 1rem;
-    color: #c5beea;
+    color: #8278b0;
 }
 
 .contacts-button {
@@ -661,13 +661,13 @@ td, th {
     letter-spacing: 1.5px;
 }
 .status p {
-    color: #FFFFFF;
+    color: #5e548e;
     margin: 1rem;
     margin-bottom: 2rem;
 }
 
 .status h3 {
-    color: #e0b1cb;
+    color: #de87b7;
     margin-top: 2rem;
 }
 
@@ -687,7 +687,7 @@ td, th {
 }
 
 .status {
-    color: #c5beea;
+    color: #8174c2;
     margin: 1rem;
 }
 
