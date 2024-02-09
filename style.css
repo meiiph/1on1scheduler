@@ -723,9 +723,7 @@ td, th {
 }
 
 #empty_row th {
-    border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px;
+    border: 0;
 }
 
 #last_time {
@@ -742,9 +740,7 @@ td, th {
 }
 
 #daysoftheweek th:not(#first_time){
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
+    border: 0;
     vertical-align: bottom;
     font-weight: lighter;
     font-size: 0.8rem;
@@ -783,7 +779,7 @@ td, th {
 }
 
 .available {
-    background-color: #c7bddf;
+    background-color: #e7fde5;
     border-top: 0px;
     border-bottom: 0px;
     border-color: rgb(194, 206, 213);
