@@ -331,6 +331,9 @@ border-radius: 20px;
     padding:0;
 }
 
+.contacts-button:hover {
+    background-color: #8bc8e9
+}
 
 .contacts-button a, input {
     margin: 0;
@@ -353,6 +356,10 @@ border-radius: 20px;
     transition: background-color 0.3s ease-in-out;
     width: 200px;
     color: white;
+}
+
+.contacts-submit-button:hover {
+    background-color: #8bc8e9
 }
 
 /* #addContactForm input{

@@ -110,7 +110,7 @@ button {
 }
 
 .disabled-button {
-    opacity: 25%;
+    opacity: 20%;
 }
 
 #select_preferences td:not(.available){
@@ -142,14 +142,62 @@ button {
     border-color: rgb(231, 185, 203);
 } */
 
-.prev-next-buttons {
+.prev-next-buttons-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
-button {
+.prev-next-button {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    background-color: #3aa2d9;
+    width: 100px;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    color: white;
+}
+
+.prev-next-button a {
+    margin: 0;
+    padding:0;
+    color: white;
+}
+
+.prev-next-button a::before {
+    position: absolute;
+    content:"";
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin: 0;
+    padding:0;
+}
+
+.prev-next-button:hover {
+    background-color: #8bc8e9
+}
+
+.prev-next-button a:hover {
+    color:white;
+}
+
+/* button {
     position: relative;
     width: 100px;
 }
@@ -168,15 +216,15 @@ button a::before {
     right:0px;
     margin: 0;
     padding:0;
-}
+} */
 
 @media only screen and (max-width: 485px){
-    .prev-next-buttons {
-        gap: 0.5rem;
+    .prev-next-buttons-container {
+        gap: 0.3rem;
     }
 
     table {
-        width: 300px;
+        width: 330px;
         overflow: auto;
         display: block;
     }
