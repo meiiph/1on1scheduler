@@ -877,6 +877,7 @@ p {
     font-family: monospace;
     font-weight: lighter;
     border: 0;
+    margin-right: 1rem;
 }
 
 p {
