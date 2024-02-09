@@ -704,7 +704,6 @@ button {
     margin-top: 3rem;
     margin-left: 5rem;
     margin-right: 5rem;
-    margin-bottom: 5rem;
 }
 
 td, th {
@@ -855,7 +854,6 @@ td, th {
 .all_cal {
     display: flex;
     flex-direction: row;
-    margin: 2rem;
 }
 
 .cal_container {
@@ -863,3 +861,13 @@ td, th {
     justify-content: center;
 }
 
+#main_text {
+    margin-bottom: 7rem;
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+}
+
+p {
+    margin-right: 2rem;
+}
