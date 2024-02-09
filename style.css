@@ -833,8 +833,7 @@ td, th {
 
 .cal_name {
     display: flex;
-    background-color: #5e548e;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 p {
@@ -856,11 +855,6 @@ p {
     margin-bottom: 0;
 }
 
-.all_cal {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
 
 .cal_container {
     display: flex;
@@ -926,14 +920,12 @@ td {
 .all_cal {
     display: flex;
     flex-direction: column;
-    width: 100px;
+    width: 10px;
 }
 
 .all_cal label{
     font-family: monospace;
-    font-size: 10px;
 }
-
 
 
 #main_cal {
