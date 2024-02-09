@@ -798,6 +798,7 @@ td, th {
     /* background-color: #9dd9f3; */
     background-color: #87ceed;
     border-radius: 15px;
+    font-weight: bold;
 }
 
 .choose_button:hover {
