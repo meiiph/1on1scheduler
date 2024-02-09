@@ -783,6 +783,8 @@ td, th {
     border-top: 0px;
     border-bottom: 0px;
     border-color: rgb(194, 206, 213);
+    font-family: monospace;
+    font-size: 10px;
 }
 
 .choose_button {
@@ -825,21 +827,10 @@ td, th {
     margin: 0.5rem;
 }
 
-.all_cal {
+.cal_name {
     display: flex;
-    flex-direction: row;
-}
-
-.cal_container {
-    display: flex;
-    justify-content: center;
-}
-
-#main_text {
-    margin-bottom: 7rem;
-    display: flex;
-    justify-content: center;
-    font-family: monospace;
+    background-color: #5e548e;
+    justify-content: space-between;
 }
 
 p {
@@ -864,6 +855,7 @@ p {
 .all_cal {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
 }
 
 .cal_container {
@@ -927,7 +919,23 @@ td {
     border-color: rgb(217, 203, 203);
 }
 
+.all_cal {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
 
+.all_cal label{
+    font-family: monospace;
+    font-size: 10px;
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+}
 
 
 @media only screen and (max-width: 485px){
