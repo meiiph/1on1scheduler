@@ -779,4 +779,8 @@ td, th {
     .invitationFormPage {
         width: 300px;
     }
+
+    .loginSignupForm {
+        width: 300px;
+    }
 }
