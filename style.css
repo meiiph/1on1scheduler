@@ -334,7 +334,8 @@ a:hover {
 }
 
 .contacts-button:hover {
-    background-color: #8bc8e9;
+    /* background-color: #8bc8e9; */
+    background-color: #7ec0e3;
 }
 
 .contacts-button a {
@@ -373,7 +374,8 @@ a:hover {
 }
 
 .contacts-submit-button:hover {
-    background-color: #8bc8e9
+    /* background-color: #8bc8e9; */
+    background-color: #7ec0e3;
 }
 
 /* #addContactForm input{
@@ -437,7 +439,8 @@ button {
 }
 
 .contacts-add-button:hover {
-    background-color: #8bc8e9;
+    /* background-color: #8bc8e9; */
+    background-color: #7ec0e3;
 }
 
 .contacts-buttons-container button {

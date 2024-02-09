@@ -159,7 +159,8 @@ button {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 
-    background-color: #3aa2d9;
+    /* background-color: #3aa2d9; */
+    background-color: #87ceed;
     width: 100px;
     font-weight: bold;
     font-size: 15px;
@@ -190,7 +191,9 @@ button {
 }
 
 .prev-next-button:hover {
-    background-color: #8bc8e9
+    /* background-color: #8bc8e9; */
+    background-color: #7ec0e3;
+    /* background-color: #78bfe6; */
 }
 
 .prev-next-button a:hover {
