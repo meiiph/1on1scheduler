@@ -791,7 +791,7 @@ td, th {
 
 .choose_button {
     color: #5e548e;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     background-color: #9dd9f3;
     border-radius: 20px;
     margin: 8px;}
