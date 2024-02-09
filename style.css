@@ -788,15 +788,19 @@ td, th {
 }
 
 .choose_button {
-    color: #5e548e;
-    /* text-decoration: underline; */
-    background-color: #9dd9f3;
-    border-radius: 20px;
-    margin: 8px;}
+    padding: 14px;
+    /* color: #5e548e; */
+    color: white;
+    font-size: 15px;
+    /* background-color: #9dd9f3; */
+    background-color: #87ceed;
+    border-radius: 15px;
+}
 
 .choose_button:hover {
     color: #007bff;
     background-color: #b8e2f2;
+    /* background-color: #7ec0e3; */
     font-weight: bold;
     border-radius: 20px;
 }
@@ -841,6 +845,11 @@ p {
     gap: 10rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+}
+
+.suggested-button-container {
+    margin-top: 3rem;
+    margin-bottom: 0;
 }
 
 .all_cal {
