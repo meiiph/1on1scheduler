@@ -844,3 +844,9 @@ td, th {
         width: 300px;
     }
 }
+
+.all_cal {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+}
