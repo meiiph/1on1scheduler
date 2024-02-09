@@ -698,34 +698,29 @@ button {
 
 
 .calendar {
-    display: flex;
-    border-collapse: collapse;
-    font-family:monospace;
     margin-top: 3rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    display: flex;
+    font-family:monospace;
+    border-collapse: collapse;
 }
 
 td, th {
-    border: white 2px solid;
+    border: rgb(233, 210, 210) 2px solid;
     width: 3rem;
     height: 1rem;
 }
+
 
 
 .time {
     vertical-align: center;
     border: 0px;
     text-align: center;
-    font-size: 0.6rem;
-    
-    
+    font-size: 0.6rem;    
 }
 
 #empty_row th {
-    border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px;
+   border: 0;
 }
 
 #last_time {
@@ -742,14 +737,12 @@ td, th {
 }
 
 #daysoftheweek th:not(#first_time){
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
     vertical-align: bottom;
     font-weight: lighter;
     font-size: 0.8rem;
     padding: 7px;
     letter-spacing: 1.5px;
+    border: 0;
 }
 .status p {
     color: #5e548e;
@@ -859,8 +852,24 @@ td, th {
     display: flex;
     justify-content: center;
     font-family: monospace;
+    background-color: #f0e7f3;
+    
+}
+
+#main_text button {
+    border-radius: 20rem;
+    background-color: white;
+    font-family: monospace;
+    font-weight: lighter;
+    border: 0;
 }
 
 p {
-    margin-right: 2rem;
+    margin-right: 0.5rem;
+}
+
+td {
+    background-color: rgb(255, 255, 255);
+    border-color: #c8b5c4;
+    margin: 0;
 }
