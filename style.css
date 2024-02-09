@@ -776,10 +776,10 @@ td, th {
 }
 
 .available {
-    background-color: #c7bddf;
+    background-color: #d9ffe0b3;
     border-top: 0px;
     border-bottom: 0px;
-    border-color: rgb(194, 206, 213);
+    border-color: rgb(214, 225, 230);
 }
 
 .choose_button {
@@ -872,4 +872,17 @@ td {
     background-color: rgb(255, 255, 255);
     border-color: #c8b5c4;
     margin: 0;
+}
+
+.choice_a {
+    background-color: #e2f8ff;
+    border-top: 0;
+    border-bottom: 0;
+    border-color: rgb(217, 203, 203);
+}
+
+#preference td:not(.available, .choice_a){
+    background-color: rgba(247, 247, 247, 0);
+    border-color: #c8b5c486 ;
+
 }
