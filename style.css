@@ -850,3 +850,9 @@ td, th {
     flex-direction: row;
     margin: 2rem;
 }
+
+.cal_container {
+    display: flex;
+    justify-content: center;
+}
+
