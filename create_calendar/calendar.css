@@ -117,7 +117,7 @@ button {
     border-color: rgb(231, 185, 203);
 }
 
-nav {
+.all_cal {
     display: flex;
     font-family: monospace;
     letter-spacing: 2px;
