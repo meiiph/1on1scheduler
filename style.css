@@ -881,8 +881,15 @@ td {
     border-color: rgb(217, 203, 203);
 }
 
-#preference td:not(.available, .choice_a){
+#preference td:not(.available, .choice_a, .choice_b){
     background-color: rgba(247, 247, 247, 0);
     border-color: #c8b5c486 ;
 
+}
+
+.choice_b {
+    background-color: hsl(333, 8%, 79%);
+    border-top: 0;
+    border-bottom: 0;
+    border-color: rgb(217, 203, 203);
 }
