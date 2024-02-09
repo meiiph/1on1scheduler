@@ -856,6 +856,74 @@ p {
     padding-right: 0.5rem;
 }
 
+.all_cal {
+    display: flex;
+    flex-direction: row;
+}
+
+.cal_container {
+    display: flex;
+    justify-content: center;
+}
+
+#main_text {
+    margin-bottom: 7rem;
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+    background-color: #f0e7f3;
+
+}
+
+#main_text button {
+    border-radius: 20rem;
+    background-color: white;
+    font-family: monospace;
+    font-weight: lighter;
+    border: 0;
+}
+
+p {
+    margin-right: 0.5rem;
+    color: #968c81;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.923);
+    border-color: #edddea;
+    margin: 0;
+}
+
+.choice_a {
+    background-color: #e2f8ffa8;
+    border-top: 0;
+    border-bottom: 0;
+    border-color: rgb(217, 203, 203);
+}
+
+#preference td:not(.available, .choice_a, .choice_b, .choice_c){
+    background-color: rgba(247, 247, 247, 0);
+    border-color: #c8b5c486 ;
+
+}
+
+.choice_b {
+    background-color: hsl(333, 8%, 79%);
+    border-top: 0;
+    border-bottom: 0;
+    border-color: rgb(217, 203, 203);
+}
+
+.choice_c {
+    background-color: hsl(11, 84%, 93%);
+    border-top: 0;
+    border-bottom: 0;
+    border-color: rgb(217, 203, 203);
+}
+
+
+
+
 @media only screen and (max-width: 485px){
     .contacts-container {
         flex-direction: column;
