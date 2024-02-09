@@ -192,8 +192,6 @@ a:hover {
 }
 
 .contacts-container {
-    /* min-width: auto; */
-    /* max-width: 800; */
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -204,7 +202,6 @@ a:hover {
 
 .contact-card {
     position: relative;
-    /* max-width: 100%; */
     width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -344,7 +341,7 @@ border-radius: 20px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-    width: 20%;
+    max-width: 300px;
     color: white;
 }
 
@@ -355,24 +352,6 @@ border-radius: 20px;
 #addContactForm input#name, input#email{
     color: black;
 }
-
-/* .contacts-select-contacts-button {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-
-    background-color: #3aa2d9;
-    width: 300px;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-} */
 
 button {
     font-weight: bold;
@@ -757,4 +736,3 @@ td, th {
         width: 300px;
     }
 }
-
