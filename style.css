@@ -768,6 +768,14 @@ td, th {
     margin-top: -50px;
 }
 
+.choose-available-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+    margin-bottom: 25px;
+}
+
 @media only screen and (max-width: 485px){
     .contacts-container {
         flex-direction: column;
