@@ -110,7 +110,7 @@ button {
 }
 
 .disabled-button {
-    opacity: 50%;
+    opacity: 25%;
 }
 
 #select_preferences td:not(.available){
@@ -121,31 +121,75 @@ button {
     background-color: rgba(249, 250, 250, 0.847);
 }
 
-.choice_a {
+/* .choice_a {
         background-color: #e3e5fb;
         border-top: 0px;
         border-bottom: 0px;
         border-color: rgb(191, 211, 214);
-}
+} */
 
-.choice_b {
-        background-color: hsl(314, 88%, 93%);
+.choice_a {
+        background-color: hsl(313, 87%, 85%);
         border-top: 0px;
         border-bottom: 0px;
         border-color: rgb(211, 190, 229);
 }
 
-.choice_c {
+/* .choice_c {
     background-color: #cbe5fa;
     border-top: 0px;
     border-bottom: 0px;
     border-color: rgb(231, 185, 203);
-}
+} */
 
 .prev-next-buttons {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+}
+
+button {
+    position: relative;
+    width: 100px;
+}
+
+button a {
+    margin: 0;
+    padding: 0;
+}
+
+button a::before {
+    position: absolute;
+    content:"";
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin: 0;
+    padding:0;
+}
+
+@media only screen and (max-width: 485px){
+    .prev-next-buttons {
+        gap: 0.5rem;
+    }
+
+    table {
+        width: 300px;
+        overflow: auto;
+        display: block;
+    }
+
+    /* th {
+        position: sticky;
+        top: 0;
+    } */
+
+    .time {
+        position: sticky;
+        left: 0;
+        /* background:hsl(313, 62%, 85%); */
+    }
+    
 }

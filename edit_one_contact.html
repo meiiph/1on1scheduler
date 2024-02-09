@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.ico">
     <title>Contacts</title>
@@ -19,17 +21,11 @@
         <input type="text" id="searchInput" name="search_query" placeholder="Search for a user...">
     </form>
 
-    <!-- <div class="contacts-back-button">
-        <button class="contacts-button" type="button">
-            <a href="contacts.html">Cancel</a>
-        </button>
-    </div> -->
-
     <button class="contacts-button" type="button">
         <a href="select_contacts.html">Select Contacts</a>
     </button>
 
-    <form id="addContactForm" action="contacts.html" method="post" enctype="multipart/form-data">
+    <form id="addContactForm" action="edit_contacts.html" method="post" enctype="multipart/form-data">
         <div class="contacts-container">
             <div class="contact-card">
                 <label for="name"></label>
@@ -43,53 +39,53 @@
                         <a href="edit_contacts.html">Cancel</a>
                     </button>
                     
-                    <input class="contacts-add-button" type="submit" value="Save">
+                    <input class="contacts-add-button" id="add" type="submit" value="Save">
                 </div>
+            </div>
+
+            <div class="contact-card">
+                <a>Alex Donald</a>
+                <p>alex.donald@gmail.com</p>
             </div>
     
             <div class="contact-card">
                 <a>John Smith</a>
                 <p>john.smith@gmail.com</p>
             </div>
-    
+
+            <div class="contact-card">
+                <a>Khai Truong</a>
+                <p>khai.truong@gmail.com</p>
+            </div>
+
+            <div class="contact-card">
+                <a>Lily Hall</a>
+                <p>lily.hall@gmail.com</p>
+            </div>
+
             <div class="contact-card">
                 <a>Mary Smith</a>
                 <p>mary.smith@gmail.com</p>
             </div>
-    
+
             <div class="contact-card">
-                <a>Lily H.</a>
-                <p>lily.h@gmail.com</p>
+                <a>Nicole Lee</a>
+                <p>nicole.lee@gmail.com</p>
+            </div>
+
+            <div class="contact-card">
+                <a>Selena Wilson</a>
+                <p>selena.wilson@gmail.com</p>
+            </div>
+
+            <div class="contact-card">
+                <a>Susan Rodriguez</a>
+                <p>susan.rodriguez@gmail.com</p>
             </div>
     
             <div class="contact-card">
-                <a>Tara</a>
-                <p>tara@gmail.com</p>
-            </div>
-    
-            <div class="contact-card">
-                <a>Salome</a>
-                <p>salome@gmail.com</p>
-            </div>
-    
-            <div class="contact-card">
-                <a>Nancy</a>
-                <p>nancy@gmail.com</p>
-            </div>
-            
-            <div class="contact-card">
-                <a>Irene</a>
-                <p>irene@gmail.com</p>
-            </div>
-    
-            <div class="contact-card">
-                <a>Khai</a>
-                <p>khai@gmail.com</p>
-            </div>
-    
-            <div class="contact-card">
-                <a>Susan</a>
-                <p>susan@gmail.com</p>
+                <a>Theresa Anderson</a>
+                <p>theresa.anderson@gmail.com</p>
             </div>
         </div>
     <form>
