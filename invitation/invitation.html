@@ -2,19 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="logo.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../logo.ico">
     <title>Invitation Form</title>
 </head>
 
 <body>
     <h1>1on1 Scheduler</h1>
-    <h2>Meeting Invitation</h2>
-    <!-- <h3>Invite John to a meeting </h3> -->
-    
-    <form class="invitationFormPage" action="statuses.html" method="POST">
+    <h2>Invitation</h2>
+        <h3>Invite someone to a meeting </h3>
+        <form class="invitationFormPage" action="statuses.html" method="POST">
         <input type="text" id="title" class="title" name="title" placeholder="Add a Title">
         <input type="date" id="date" name="invitation-date" value="2024-02-07" min="2024-02-07" max="2300-12-31" />
         <label>From:</label>
@@ -23,16 +22,10 @@
         <input type="time" id="toTime" name="toTime" min="00:00" max="23:59" required>
         <input type="email" id="email" name="email" placeholder="Add an email" required>
         <input type="text" id="description" name="description" placeholder="Add a description" required>
-
-        <div class="contacts-buttons-container">
-            <button class="send-invite-button" type="button">
-                <a href="contacts.html">Cancel</a>
-            </button>
-            
-            <input class="send-invite-button" type="submit" id="sendInviteBtn" value="Send Invite">
-        </div>
+        <input type="button" id="sendInviteBtn" class="login-button" value="Send Invite">
+        <input type="button" class="login-button" value="Cancel" onclick="window.location.href='../contacts/contacts.html';">
     </form>
-    <footer></footer>
+
     <script src="script.js"></script>
 </body>
 

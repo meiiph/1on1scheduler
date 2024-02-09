@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="logo.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../logo.ico">
     <title>Contacts</title>
 </head>
 
 <body>
     <nav>
-        <a class="logo" href="login-home.html">1on1 Scheduler</a>
+        <a class="logo" href="../login/login-home.html">1on1 Scheduler</a>
         <a href="contacts.html">Contacts</a>
-        <a href="calendar.html">Calendars</a>
-        <a href="home.html">Logout</a>
+        <a href="../create_calendar/calendar.html">Calendars</a>
+        <a href="../login/login.html">Logout</a>
     </nav>
     <h2>Contacts</h2>
 
@@ -21,13 +19,14 @@
         <input type="text" id="searchInput" name="search_query" placeholder="Search for a user...">
     </form>
 
-    <form action="contacts.html" method="post" enctype="multipart/form-data">
-        <div class="contacts-back-button">
-            <button class="contacts-button" type="button">
-                <a href="edit_contacts.html">Back</a>
-            </button>
-            <input class="contacts-submit-button" type="submit" value="Delete Selected Contacts">
-        </div>
+    <div class="contacts-back-button">
+        <button class="contacts-button" type="button">
+            <a href="edit_contacts.html">Back</a>
+        </button>
+    </div>
+
+    <form action="delete_selected_contacts.html" method="post" enctype="multipart/form-data">
+        <input class="contacts-submit-button" type="submit" value="Delete Selected Contacts">
 
         <div class="contacts-container">
             <div class="contact-card">
@@ -103,7 +102,6 @@
             </div>
         </div>
     </form>
-    <footer></footer>
 </body>
 
 </html>

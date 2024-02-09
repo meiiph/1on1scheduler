@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="logo.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../logo.ico">
     <title>Contacts</title>
 </head>
 
 <body>
     <nav>
-        <a class="logo" href="home.html">1on1 Scheduler</a>
+        <a class="logo" href="../login/login-home.html">1on1 Scheduler</a>
         <a href="contacts.html">Contacts</a>
-        <a href="calendar.html">Calendars</a>
-        <a href="login.html">Logout</a>
+        <a href="../create_calendar/calendar.html">Calendars</a>
+        <a href="../login/login.html">Logout</a>
     </nav>
     <h2>Contacts</h2>
 
@@ -21,30 +19,28 @@
         <input type="text" id="searchInput" name="search_query" placeholder="Search for a user...">
     </form>
 
-    <!-- <div class="contacts-back-button">
-        <button class="contacts-button" type="button">
-            <a href="contacts.html">Cancel</a>
-        </button>
-    </div> -->
+    <button class="contacts-button" type="button">
+        <a href="select_contacts.html">Select Contacts</a>
+    </button>
 
-    <form id="addContactForm" action="added_new_contact.html" method="post" enctype="multipart/form-data">
+    <form id="addContactForm" action="contacts.html" method="post" enctype="multipart/form-data">
         <div class="contacts-container">
             <div class="contact-card">
-                    <label for="name"></label>
-                    <input type="text" id="name" name="name" rows="1" cols="10" placeholder="Name" required>
+                <label for="name"></label>
+                <input type="text" id="name" name="name" rows="1" cols="10" value="Karen Johnson" required>
 
-                    <label for="email"></label>
-                    <input type="email" id="email" name="email" rows="1" cols="10" placeholder="Email Address" required>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" rows="1" cols="10" value="karen.johnson@gmail.com" required>
 
-                    <div class="contacts-buttons-container">
-                        <button class="send-invite-button" type="button">
-                            <a href="contacts.html">Cancel</a>
-                        </button>
-                        
-                        <input class="send-invite-button" type="submit" value="Add">
-                    </div>
+                <div class="contacts-buttons-container">
+                    <button class="contacts-button" type="button">
+                        <a href="edit_contacts.html">Cancel</a>
+                    </button>
+                    
+                    <input class="contacts-add-button" type="submit" value="Save">
+                </div>
             </div>
-
+    
             <div class="contact-card">
                 <a>John Smith</a>
                 <p>john.smith@gmail.com</p>
@@ -86,8 +82,6 @@
             </div>
         </div>
     <form>
-    
-    <footer></footer>
 </body>
 
 </html>
