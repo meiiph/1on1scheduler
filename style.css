@@ -247,24 +247,24 @@ a:hover {
 }
 
 .home h3 {
-font-size: 20px;
-margin: 1rem;
-color: #5e548e;
+    font-size: 20px;
+    margin: 1rem;
+    color: #5e548e;
 }
 
 .home p {
-font-size: 20px;
-margin: 1rem;
-color: #5e548e; 
-padding: 25px;
+    font-size: 20px;
+    margin: 1rem;
+    color: #5e548e; 
+    padding: 25px;
 }
 
 .home a {
-font-size: 20px;
-text-decoration: underline;
-color: #5e548e;
-background-color: #9dd9f3;
-border-radius: 20px;
+    font-size: 20px;
+    /* text-decoration: underline; */
+    color: #5e548e;
+    background-color: #9dd9f3;
+    border-radius: 20px;
 }
 
 .home a:hover {
@@ -305,8 +305,10 @@ border-radius: 20px;
     position: relative;
     text-align: center;
     margin: 0.5rem;
-
-    background-color: #3aa2d9;
+    
+    /* background-color: #3aa2d9; */
+    /* background-color: #9dd9f3; */
+    background-color: #87ceed;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -332,13 +334,23 @@ border-radius: 20px;
 }
 
 .contacts-button:hover {
-    background-color: #8bc8e9
+    background-color: #8bc8e9;
 }
 
-.contacts-button a, input {
+.contacts-button a {
+    margin: 0;
+    padding: 0;
+    /* color: #8e86b0; */
+    color: white;
+}
+
+
+.contacts-button input {
     margin: 0;
     padding:0;
     color: #fff;
+    /* color: #8e86b0; */
+    /* color: #5e548e; */
 }
 
 .contacts-submit-button {
@@ -348,7 +360,9 @@ border-radius: 20px;
 
     font-size: 14px;
     font-weight: bold;
-    background-color: #3aa2d9;
+    /* background-color: #3aa2d9; */
+    /* background-color: #9dd9f3; */
+    background-color: #87ceed;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -389,7 +403,9 @@ button {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 
-    background-color: #3aa2d9;
+    /* background-color: #3aa2d9; */
+    /* background-color: #9dd9f3; */
+    background-color: #87ceed;
     width: 100px;
     font-weight: bold;
     font-size: 20px;
@@ -416,13 +432,24 @@ button {
     margin: 0;
     padding:0;
     color: #fff;
+    /* color: #8e86b0; */
     font-size: 20px;
+}
+
+.contacts-add-button:hover {
+    background-color: #8bc8e9;
 }
 
 .contacts-buttons-container button {
     padding: 0;
     margin: 0;
     padding: 10px 20px;
+}
+
+.contacts-buttons-container input {
+    /* padding: 0; */
+    margin: 0;
+    color: white;
 }
 
 .contacts-buttons-container {
@@ -433,6 +460,7 @@ button {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    gap: 0.5rem;
 }
 
 .chkbox-contact {
@@ -622,17 +650,23 @@ button {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 
-    background-color: #3aa2d9;
+    /* background-color: #3aa2d9; */
+    background-color: #87ceed;
     width: 150px;
     font-weight: bold;
     font-size: 20px;
     padding: 10px 20px;
+    margin: 0.5rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 
     color: white;
+}
+
+.send-invite-button:hover {
+    background-color: #78bfe6;
 }
 
 .send-invite-button a {
@@ -728,7 +762,7 @@ td, th {
 
 .status a {
     color: #5e548e;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     background-color: #9dd9f3;
     border-radius: 20px;
     margin: 8px;
