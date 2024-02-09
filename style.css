@@ -826,6 +826,27 @@ td, th {
     margin-bottom: 25px;
 }
 
+.all_cal {
+    display: flex;
+    flex-direction: row;
+}
+
+.cal_container {
+    display: flex;
+    justify-content: center;
+}
+
+#main_text {
+    margin-bottom: 7rem;
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+}
+
+p {
+    margin-right: 2rem;
+}
+
 @media only screen and (max-width: 485px){
     .contacts-container {
         flex-direction: column;
@@ -849,25 +870,4 @@ td, th {
     .loginSignupForm {
         width: 300px;
     }
-}
-
-.all_cal {
-    display: flex;
-    flex-direction: row;
-}
-
-.cal_container {
-    display: flex;
-    justify-content: center;
-}
-
-#main_text {
-    margin-bottom: 7rem;
-    display: flex;
-    justify-content: center;
-    font-family: monospace;
-}
-
-p {
-    margin-right: 2rem;
 }
