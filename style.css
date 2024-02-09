@@ -733,6 +733,13 @@ td, th {
     align-items: center;
     margin-top: -50px;
 }
+.choose_div2 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 350px;
+    align-items: center;
+    margin-top: -75px;
+}
 /* @media only screen and (max-width: 391px){
     .contacts-container {
         max-width: 391px;
