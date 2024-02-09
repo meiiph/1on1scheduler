@@ -63,13 +63,21 @@ section {
 }
 
 footer {
-    background-color: #007bff;
+    /* background-color: #007bff;
     color: #fff;
     text-align: center;
     padding: 10px;
     position: fixed;
     bottom: 0;
+    width: 100%; */
+    
+    background-color: transparent;
+    bottom: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
 }
 
 .loginSignupForm {
@@ -114,6 +122,7 @@ form input {
     border-radius: 5px;
     background-color: #ffffff7e;
     border-color: #333;
+    color: black;
 }
 
 nav {
@@ -123,6 +132,7 @@ nav {
     box-shadow: 0 0 10px rgb(96, 96, 96);
     padding: 10px;
     text-align: center;
+    max-width: 100%;
 }
 
 nav .logo {
@@ -141,7 +151,8 @@ nav a {
     /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-weight: 400;
     margin: 0 10px;
-    padding: 4px 8px;
+    /* padding: 4px 8px; */
+    padding: 0;
     text-decoration: none;
     background-color: transparent;
     transition: color 0.3s ease-in-out;
@@ -173,7 +184,6 @@ a:hover {
 }
 
 #searchForm {
-    max-width: 800%;
     width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -190,6 +200,7 @@ a:hover {
 }
 
 .contacts-container {
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -199,7 +210,6 @@ a:hover {
 
 .contact-card {
     position: relative;
-    /* max-width: 800%; */
     width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -209,7 +219,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* align-items: start; */
+
 }
 
 .contact-card a::before {
@@ -236,27 +246,25 @@ a:hover {
     width: 400px;
 }
 
-
-
 .home h3 {
-font-size: 20px;
-margin: 1rem;
-color: #ffffff;
+    font-size: 20px;
+    margin: 1rem;
+    color: #5e548e;
 }
 
 .home p {
-font-size: 20px;
-margin: 1rem;
-color: #ffffff; 
-padding: 25px;
+    font-size: 20px;
+    margin: 1rem;
+    color: #5e548e; 
+    padding: 25px;
 }
 
 .home a {
-font-size: 20px;
-text-decoration: underline;
-color: #5e548e;
-background-color: #9dd9f3;
-border-radius: 20px;
+    font-size: 20px;
+    /* text-decoration: underline; */
+    color: #5e548e;
+    background-color: #9dd9f3;
+    border-radius: 20px;
 }
 
 .home a:hover {
@@ -290,21 +298,24 @@ border-radius: 20px;
 
 .home h2 {
     margin: 1rem;
-    color: #c5beea;
+    color: #8278b0;
 }
 
 .contacts-button {
     position: relative;
     text-align: center;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-
-    background-color: #3aa2d9;
+    margin: 0.5rem;
+    
+    /* background-color: #3aa2d9; */
+    /* background-color: #9dd9f3; */
+    background-color: #87ceed;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+
+    width: 200px;
 }
 
 .contacts-back-button {
@@ -322,11 +333,25 @@ border-radius: 20px;
     padding:0;
 }
 
+.contacts-button:hover {
+    /* background-color: #8bc8e9; */
+    background-color: #7ec0e3;
+}
 
-.contacts-button a, input {
+.contacts-button a {
+    margin: 0;
+    padding: 0;
+    /* color: #8e86b0; */
+    color: white;
+}
+
+
+.contacts-button input {
     margin: 0;
     padding:0;
     color: #fff;
+    /* color: #8e86b0; */
+    /* color: #5e548e; */
 }
 
 .contacts-submit-button {
@@ -334,38 +359,32 @@ border-radius: 20px;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 
+    font-size: 14px;
     font-weight: bold;
-    background-color: #3aa2d9;
+    /* background-color: #3aa2d9; */
+    /* background-color: #9dd9f3; */
+    background-color: #87ceed;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-    width: 20%;
+    width: 200px;
     color: white;
 }
+
+.contacts-submit-button:hover {
+    /* background-color: #8bc8e9; */
+    background-color: #7ec0e3;
+}
+
+/* #addContactForm input{
+    color: white;
+} */
 
 #addContactForm input#name, input#email{
     color: black;
 }
-
-/* .contacts-select-contacts-button {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-
-    background-color: #3aa2d9;
-    width: 300px;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-} */
 
 button {
     font-weight: bold;
@@ -386,7 +405,9 @@ button {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 
-    background-color: #3aa2d9;
+    /* background-color: #3aa2d9; */
+    /* background-color: #9dd9f3; */
+    background-color: #87ceed;
     width: 100px;
     font-weight: bold;
     font-size: 20px;
@@ -395,6 +416,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    color: white;
 }
 
 .contacts-add-button a::before {
@@ -412,13 +434,25 @@ button {
     margin: 0;
     padding:0;
     color: #fff;
+    /* color: #8e86b0; */
     font-size: 20px;
+}
+
+.contacts-add-button:hover {
+    /* background-color: #8bc8e9; */
+    background-color: #7ec0e3;
 }
 
 .contacts-buttons-container button {
     padding: 0;
     margin: 0;
     padding: 10px 20px;
+}
+
+.contacts-buttons-container input {
+    /* padding: 0; */
+    margin: 0;
+    color: white;
 }
 
 .contacts-buttons-container {
@@ -429,6 +463,7 @@ button {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    gap: 0.5rem;
 }
 
 .chkbox-contact {
@@ -596,7 +631,7 @@ button {
 }
 
 .invitationFormPage {
-  max-width: 800%;
+  /* max-width: 800%; */
   width: 350px;
   height: 350;
   margin: 0 auto;
@@ -610,6 +645,49 @@ button {
   align-items: center;
 }
 
+.send-invite-button {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    /* background-color: #3aa2d9; */
+    background-color: #87ceed;
+    width: 150px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    color: white;
+}
+
+.send-invite-button:hover {
+    background-color: #78bfe6;
+}
+
+.send-invite-button a {
+    margin: 0;
+    padding:0;
+    color: white;
+}
+
+.send-invite-button a::before {
+    position: absolute;
+    content:"";
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin: 0;
+    padding:0;
+}
 
   .close {
     position: absolute;
@@ -675,19 +753,19 @@ td, th {
     letter-spacing: 1.5px;
 }
 .status p {
-    color: #FFFFFF;
+    color: #5e548e;
     margin: 1rem;
     margin-bottom: 2rem;
 }
 
 .status h3 {
-    color: #e0b1cb;
+    color: #de87b7;
     margin-top: 2rem;
 }
 
 .status a {
     color: #5e548e;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     background-color: #9dd9f3;
     border-radius: 20px;
     margin: 8px;
@@ -701,7 +779,7 @@ td, th {
 }
 
 .status {
-    color: #c5beea;
+    color: #8174c2;
     margin: 1rem;
 }
 
@@ -740,10 +818,48 @@ td, th {
     align-items: center;
     margin-top: -75px;
 }
-/* @media only screen and (max-width: 391px){
+
+.choose-available-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+    margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 485px){
     .contacts-container {
-        max-width: 391px;
+        flex-direction: column;
+    }
+    .contact-card {
+        width: 300px;
     }
 
-} */
+    .contact-card p{
+        width: 300px;
+    }
+
+    #searchForm {
+        width: 300px;
+    }
+
+    .invitationFormPage {
+        width: 300px;
+    }
+
+    .loginSignupForm {
+        width: 300px;
+    }
+}
+
+.all_cal {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+}
+
+.cal_container {
+    display: flex;
+    justify-content: center;
+}
 
