@@ -698,18 +698,19 @@ button {
 
 
 .calendar {
-    margin-top: 3rem;
     display: flex;
-    font-family:monospace;
     border-collapse: collapse;
+    font-family:monospace;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
 td, th {
-    border: rgb(233, 210, 210) 2px solid;
+    border: white 2px solid;
     width: 3rem;
     height: 1rem;
 }
-
 
 
 .time {
@@ -717,11 +718,14 @@ td, th {
     border: 0px;
     text-align: center;
     font-size: 0.6rem;
-    color: #9d7c73;    
+    
+    
 }
 
 #empty_row th {
-   border: 0;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
 }
 
 #last_time {
@@ -738,13 +742,14 @@ td, th {
 }
 
 #daysoftheweek th:not(#first_time){
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
     vertical-align: bottom;
     font-weight: lighter;
     font-size: 0.8rem;
     padding: 7px;
     letter-spacing: 1.5px;
-    border: 0;
-    color: #9d7c73;
 }
 .status p {
     color: #5e548e;
@@ -778,10 +783,10 @@ td, th {
 }
 
 .available {
-    background-color: #d9ffe0b3;
+    background-color: #c7bddf;
     border-top: 0px;
     border-bottom: 0px;
-    border-color: rgb(214, 225, 230);
+    border-color: rgb(194, 206, 213);
 }
 
 .choose_button {
@@ -798,7 +803,7 @@ td, th {
     border-radius: 20px;
 }
 
-.choose_div {
+/* .choose_div {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -811,14 +816,13 @@ td, th {
     margin-left: 350px;
     align-items: center;
     margin-top: -75px;
-}
+} */
 
 .choose-available-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0.5rem;
-    margin-bottom: 25px;
 }
 
 .all_cal {
@@ -840,6 +844,16 @@ td, th {
 
 p {
     margin-right: 2rem;
+}
+
+.back-next-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0.5rem;
+    gap: 10rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 @media only screen and (max-width: 485px){
@@ -865,69 +879,15 @@ p {
     .loginSignupForm {
         width: 300px;
     }
-}
 
-.all_cal {
-    display: flex;
-    flex-direction: row;
-}
+    table {
+        width: 330px;
+        overflow: auto;
+        display: block;
+    }
 
-.cal_container {
-    display: flex;
-    justify-content: center;
-}
-
-#main_text {
-    margin-bottom: 7rem;
-    display: flex;
-    justify-content: center;
-    font-family: monospace;
-    background-color: #f0e7f3;
-    
-}
-
-#main_text button {
-    border-radius: 20rem;
-    background-color: white;
-    font-family: monospace;
-    font-weight: lighter;
-    border: 0;
-}
-
-p {
-    margin-right: 0.5rem;
-    color: #968c81;
-}
-
-td {
-    background-color: rgba(255, 255, 255, 0.923);
-    border-color: #edddea;
-    margin: 0;
-}
-
-.choice_a {
-    background-color: #e2f8ffa8;
-    border-top: 0;
-    border-bottom: 0;
-    border-color: rgb(217, 203, 203);
-}
-
-#preference td:not(.available, .choice_a, .choice_b, .choice_c){
-    background-color: rgba(247, 247, 247, 0);
-    border-color: #c8b5c486 ;
-
-}
-
-.choice_b {
-    background-color: hsl(333, 8%, 79%);
-    border-top: 0;
-    border-bottom: 0;
-    border-color: rgb(217, 203, 203);
-}
-
-.choice_c {
-    background-color: hsl(11, 84%, 93%);
-    border-top: 0;
-    border-bottom: 0;
-    border-color: rgb(217, 203, 203); 
+    .time {
+        position: sticky;
+        left: 0;
+    }
 }
