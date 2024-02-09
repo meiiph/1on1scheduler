@@ -3,40 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="logo.ico">
-    <title>Welcome back!</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../logo.ico">
+    <title>New Availabilities</title>
 </head>
 <body>
-    <nav>
-        <a class="logo" href="login-home.html">1on1 Scheduler</a>
-        <a href="contacts.html">Contacts</a>
-        <a href="view_calendars.html">Calendars</a>
-        <a href="home.html">Logout</a>
-    </nav>
-    <div class="home">
-    <!-- Retrieving the user's actual username to be implemented with JavaScript -->
-    <h1>Welcome back, &ltUser&gt!</h1>
-    <div class="card_container">
-        <div class="card">
-            <p>Creating a new calendar?</p> 
-            <a href="create_calendar/calendar.html">Click here</a>
-        </div>
-
-        <div class="card">
-            <p>Checking invitation statuses?</p>
-            <a href="statuses.html">Click here</a>
-        </div>
-        <br><br><br>
-    </div>
-        <h2>Your week at a glance:</h2>
-    </div>
-    <div class="cal_container">
-    <table class="calendar"">
-        <tr>
-            <th class="calendar_link"><a href="calendar_monthly.html"></a></th>
-            <th class="calendar_link"><a href="calendar.html"></a></th>
-        </tr>
+    <h1>Here are the times you are both available.</h1>
+    <h2>From the calendar below, please pick what time is best for you.</h2>
+    <table class="calendar">
         <tr id="daysoftheweek">
             <td rowspan="2" class="time" id="first_time">12:00</th>
             <th>Monday</th>
@@ -60,7 +34,7 @@
             <td rowspan="2" class="time">02:00</th>
             <td></td>
             <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -69,7 +43,7 @@
         <tr>
             <td></td>
             <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -78,8 +52,8 @@
         <tr>
             <td rowspan="2" class="time">04:00</th>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="available"></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -87,8 +61,8 @@
         </tr>
         <tr>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="available"></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -97,8 +71,8 @@
         <tr>
             <td rowspan="2" class="time">06:00</th>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="available"></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -106,68 +80,68 @@
         </tr>
         <tr>
             <td></td>
+            <td class="available"></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
         </tr>
         <tr>
             <td rowspan="2" class="time">08:00</th>
             <td></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
         </tr>
         <tr>
             <td></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
         </tr>
         <tr>
             <td rowspan="2" class="time">10:00</th>
             <td></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
         </tr>
         <tr>
             <td></td>
+            <td class="available"></td>
             <td></td>
+            <td class="available"></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
         </tr>
         <tr>
             <td rowspan="2" class="time">12:00</th>
             <td></td>
+            <td class="available"></td>
             <td></td>
+            <td class="available"></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
+            <td class="available"></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
         </tr>
         <tr>
@@ -175,18 +149,18 @@
             <td></td>
             <td></td>
             <td></td>
+            <td class="available"></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
+            <td class="available"></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
         </tr>
         <tr>
@@ -194,9 +168,9 @@
             <td></td>
             <td></td>
             <td></td>
+            <td class="available"></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
         </tr>
         <tr>
@@ -205,14 +179,14 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
         </tr>
         <tr>
             <td rowspan="2" class="time">06:00</th>
             <td></td>
             <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -221,7 +195,7 @@
         <tr>
             <td></td>
             <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -231,7 +205,7 @@
             <td rowspan="2" class="time">08:00</th>
             <td></td>
             <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -240,7 +214,7 @@
         <tr>
             <td></td>
             <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -250,7 +224,7 @@
             <td rowspan="2" class="time">10:00</th>
             <td></td>
             <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -259,7 +233,7 @@
         <tr>
             <td></td>
             <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -269,13 +243,13 @@
             <td rowspan="2" class="time">12:00</th>
             <td></td>
             <td></td>
-            <td></td>
+            <td class="available"></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
-       
+    
         <tr id="empty_row">
             <th></th>
             <th></th>
@@ -285,9 +259,8 @@
             <th></th>
             <th></th>
         </tr>
-        </table>
-    </div>
-    <footer></footer>
+        </table>`
+        <div class="choose_div"><a class="choose_button" href="choose_new2.html">Next</a></div>
+        <div class="choose_div2"><a class="choose_button" href="../login/login-home.html">Back</a></div>
 </body>
-
 </html>

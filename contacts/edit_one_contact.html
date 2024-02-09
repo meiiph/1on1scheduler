@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="logo.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../logo.ico">
     <title>Contacts</title>
 </head>
 
 <body>
     <nav>
-        <a class="logo" href="login-home.html">1on1 Scheduler</a>
+        <a class="logo" href="../home.html">1on1 Scheduler</a>
         <a href="contacts.html">Contacts</a>
-        <a href="calendar.html">Calendars</a>
-        <a href="home.html">Logout</a>
+        <a href="../create_calendar/calendar.html">Calendars</a>
+        <a href="../login/login.html">Logout</a>
     </nav>
     <h2>Contacts</h2>
 
@@ -25,7 +23,7 @@
         <a href="select_contacts.html">Select Contacts</a>
     </button>
 
-    <form id="addContactForm" action="edit_contacts.html" method="post" enctype="multipart/form-data">
+    <form id="addContactForm" action="contacts.html" method="post" enctype="multipart/form-data">
         <div class="contacts-container">
             <div class="contact-card">
                 <label for="name"></label>
@@ -35,17 +33,12 @@
                 <input type="email" id="email" name="email" rows="1" cols="10" value="karen.johnson@gmail.com" required>
 
                 <div class="contacts-buttons-container">
-                    <button class="send-invite-button" type="button">
+                    <button class="contacts-button" type="button">
                         <a href="edit_contacts.html">Cancel</a>
                     </button>
                     
-                    <input class="send-invite-button" id="add" type="submit" value="Save">
+                    <input class="contacts-add-button" type="submit" value="Save">
                 </div>
-            </div>
-
-            <div class="contact-card">
-                <a>Alex Donald</a>
-                <p>alex.donald@gmail.com</p>
             </div>
     
             <div class="contact-card">
@@ -89,7 +82,6 @@
             </div>
         </div>
     <form>
-    <footer></footer>
 </body>
 
 </html>
