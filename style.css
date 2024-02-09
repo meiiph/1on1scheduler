@@ -869,13 +869,13 @@ p {
 }
 
 td {
-    background-color: rgb(255, 255, 255);
-    border-color: #c8b5c4;
+    background-color: rgba(255, 255, 255, 0.923);
+    border-color: #edddea;
     margin: 0;
 }
 
 .choice_a {
-    background-color: #e2f8ff;
+    background-color: #e2f8ffa8;
     border-top: 0;
     border-bottom: 0;
     border-color: rgb(217, 203, 203);
