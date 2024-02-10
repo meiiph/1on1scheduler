@@ -968,4 +968,25 @@ td {
         position: sticky;
         left: 0;
     }
+
+    .cal_container{
+        width: 330px;
+    }
+
+    .cal_container table{
+        margin: 0;
+        padding: 0;
+    }
+
+    #main_cal {
+        flex-direction: column;
+    }
+    
+    .all_cal {
+        flex-direction: row;
+        margin-top: 2rem;
+        gap: 1rem;
+        justify-content: center;
+        width: 330px;
+    }
 }
