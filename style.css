@@ -1028,3 +1028,14 @@ td {
         margin-left: 0;
     }
 }
+
+@media only screen and (max-width: 845px) {
+    .contacts-container {
+        flex-direction: column;
+        padding: 12px;
+    }
+    
+    .invisible-contact-card {
+        display: none;
+    }
+}
