@@ -1,3 +1,6 @@
+<!-- This is the home page for the user after they have logged in. -->
+<!-- It will display their name, and give them options to create a new calendar, or check their invitation statuses. -->
+<!-- It will also display a weekly calendar at the bottom, for easy access to what the user would need to do that week. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +11,7 @@
     <title>Welcome back!</title>
 </head>
 <body>
+    <!-- Navigation bar at the top of the page. -->
     <nav>
         <a class="logo" href="login-home.html">1on1 Scheduler</a>
         <a href="../contacts/contacts.html">Contacts</a>
@@ -16,6 +20,7 @@
     </nav>
     <div class="home">
     <h1>Welcome back, &ltUser&gt!</h1>
+    <!-- The buttons for a user to pick the most common actions for the website: create a new calendar or check on current invite statuses. -->
     <div class="card_container">
         <div class="card">
             <p>Creating a new calendar?</p> 
@@ -28,6 +33,7 @@
         </div>
         <br><br><br>
     </div>
+    <!-- The weekly calendar displayed for the user to see what they have planned for the week. -->
         <h2>Your week at a glance:</h2>
     </div>
     <div class="cal_container">
@@ -286,6 +292,8 @@
         </tr>
         </table>
     </div>
+
+    <!-- Footer to prevent elements sticking to the bottom of the page. -->
     <footer></footer>
 </body>
 
