@@ -1,3 +1,5 @@
+<!-- The (currently static) page for demonstrating the usage of selecting another time slot, outside of the suggested schedules. -->
+<!-- The proper functionality of this page will be implemented in later phases. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +10,7 @@
     <title>New Availabilities</title>
 </head>
 <body>
+    <!-- Navigation bar at the top of the page. -->
     <nav>
         <a class="logo" href="../login/login-home.html">1on1 Scheduler</a>
         <a href="../contacts/contacts.html">Contacts</a>
@@ -16,8 +19,9 @@
     </nav>
 
     <h2>You have chosen the below  time slot.</h2>
-    <h3>Click "Done" if you are satisfied</h3>
+    <h3>Click "Done" once you are ready to continue.</h3>
     
+    <!-- A calendar table that displays the user's alternative meeting time slot. -->
     <div class="choose-available-container">
         <table class="calendar">
             <tr id="daysoftheweek">
@@ -271,12 +275,15 @@
         </table>
     </div>
         
+        <!-- The button panel for the user to go back, or continue with their new chosen meeting time slot. -->
         <div class="back-next-buttons-container">
             <!-- <div class="choose_div"><a class="choose_button" href="invitation.html">Next</a></div>
             <div class="choose_div2"><a class="choose_button" href="../login/login-home.html">Back</a></div> -->
             <a class="choose_button" href="choose_new.html">Back</a>
             <a class="choose_button" href="statuses.html">Done</a>
         </div>
+
+        <!-- Footer to prevent elements sticking to the bottom of the page. -->
         <footer></footer>
     </body>
 </html>
