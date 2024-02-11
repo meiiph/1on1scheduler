@@ -34,3 +34,6 @@ Nancy Hu : Implemented home page and worked on the choose new schedule usecase a
 Salome Mahmoud : Implemented login, sign-up and invitation functionality and organized the use cases. 
 
 Tara Chakkithara : Implemented the create calendar use case and worked on functionality to view all calendars.
+
+## GitHub Repo Link:
+https://github.com/meiiph/1on1scheduler.git
