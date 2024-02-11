@@ -5,332 +5,350 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../style.css" rel="stylesheet">
+    <link rel="icon" href="../logo.ico">
     <title>New Calendar</title>
 </head>
 <body id="select_preferences">
-    <!-- A current template of what a user's availability might be during the week. -->
-    <!-- The user is then prompted to go to the next page where they can choose their first meeting preference. -->
-    <div class="cal_container">
-    <table class="calendar">
-    <tr id="daysoftheweek">
-        <th rowspan="2" class="time" id="first_time">12:00</th>
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thursday</th>
-        <th>Friday</th>
-        <th>Saturday</th>
-        <th>Sunday</th>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <th rowspan="2" class="time">02:00</th>
-        <div class="time_slot">
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <div>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-        </div>
-    </tr>
-    <tr>
-        <th rowspan="2" class="time">04:00</th>
-        <div class="time_slot">
-            <td></td>
-            <td class="available"></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-        </div>
-    </tr>
-    <tr>
-        <div class="time_slot">
-            <td></td>
-            <td class="available"></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-        </div>
-    </tr>
-    <tr>
-        <th rowspan="2" class="time">06:00</th>
-        <div class="time_slot">
-            <td></td>
-            <td class="available"></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-        </div>
-    </tr>
-    <tr>
-        <div class="time_slot">
-            <td></td>
-            <td class="available"></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td class="available"></td>
-        </div>   
-    </tr>
-    <tr>
-        <th rowspan="2" class="time">08:00</th>
-        <div class="time_slot">
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td class="available"></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <div class="time_slot">
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td class="available"></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <th rowspan="2" class="time">10:00</th>
+    <!-- Navigation bar at the top of the page. -->
+    <nav>
+        <a class="logo" href="../login/login-home.html">1on1 Scheduler</a>
+        <a href="../contacts/contacts.html">Contacts</a>
+        <a href="../create_calendar/view_calendars.html">Calendars</a>
+        <a href="../login/login.html">Logout</a>
+    </nav>
 
-        <div class="time_slot">
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <div class="time_slot">
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-        </div>
-       
-    </tr>
-    <tr>
-        <th rowspan="2" class="time">12:00</th>
-        <div class="time_slot">
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <div class="time_slot">
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <th rowspan="2" class="time">02:00</th>
-        <div class="time_slot">
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <div class="time_slot">
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <th rowspan="2" class="time">04:00</th>
-        <div class="time_slot">
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <div class="time_slot">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <th rowspan="2" class="time">06:00</th>
-        <div class="time_slot">
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <div class="time_slot">
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <th rowspan="2" class="time">08:00</th>
-        <div class="time_slot">
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <div class="time_slot">
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <th rowspan="2" class="time">10:00</th>
-        <div class="time_slot">
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <div class="time_slot">
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-        </div>
-        
-    </tr>
-    <tr>
-        <th rowspan="2" class="time">12:00</th>
-        <div class="time_slot">
-            <td></td>
-            <td></td>
-            <td class="available"></td>
-            <td></td>
-            <td></td>
-            <td class="available"</td>
-            <td></td>
-        </div>
-        
-    </tr>
+    <h2>New Calendar</h2>
 
-    <tr id="empty_row">
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    </table>
-</div>
+    <main id="main_cal">
+        <!-- A current template of what a user's availability might be during the week. -->
+        <!-- The user is then prompted to go to the next page where they can choose their first meeting preference. -->
+        <div class="cal_container">
+            <table class="calendar">
+                <tr id="daysoftheweek">
+                    <th rowspan="2" class="time" id="first_time">12:00</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th rowspan="2" class="time">02:00</th>
+                    <div class="time_slot">
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <div>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                    </div>
+                </tr>
+                <tr>
+                    <th rowspan="2" class="time">04:00</th>
+                    <div class="time_slot">
+                        <td></td>
+                        <td class="available"></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div class="time_slot">
+                        <td></td>
+                        <td class="available"></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                    </div>
+                </tr>
+                <tr>
+                    <th rowspan="2" class="time">06:00</th>
+                    <div class="time_slot">
+                        <td></td>
+                        <td class="available"></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div class="time_slot">
+                        <td></td>
+                        <td class="available"></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td class="available"></td>
+                    </div>   
+                </tr>
+                <tr>
+                    <th rowspan="2" class="time">08:00</th>
+                    <div class="time_slot">
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td class="available"></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <div class="time_slot">
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td class="available"></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <th rowspan="2" class="time">10:00</th>
+        
+                    <div class="time_slot">
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <div class="time_slot">
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                    </div>
+                
+                </tr>
+                <tr>
+                    <th rowspan="2" class="time">12:00</th>
+                    <div class="time_slot">
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <div class="time_slot">
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <th rowspan="2" class="time">02:00</th>
+                    <div class="time_slot">
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <div class="time_slot">
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <th rowspan="2" class="time">04:00</th>
+                    <div class="time_slot">
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <div class="time_slot">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <th rowspan="2" class="time">06:00</th>
+                    <div class="time_slot">
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <div class="time_slot">
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <th rowspan="2" class="time">08:00</th>
+                    <div class="time_slot">
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <div class="time_slot">
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <th rowspan="2" class="time">10:00</th>
+                    <div class="time_slot">
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <div class="time_slot">
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                    </div>
+                    
+                </tr>
+                <tr>
+                    <th rowspan="2" class="time">12:00</th>
+                    <div class="time_slot">
+                        <td></td>
+                        <td></td>
+                        <td class="available"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available"</td>
+                        <td></td>
+                    </div>
+                    
+                </tr>
+        
+                <tr id="empty_row">
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+    </main>
+
     <div id="main_text">
-        <p>please select your availability</p>
-        <button><a href="first_choice.html">next</a></button>
-        
+        <p>
+            Please select your availability
+        </p>
+        <button><a href="first_choice.html">Next</a></button>
+        <button><a href="../login/login-home.html">Cancel</a></button>
     </div>
+    
+    <footer></footer>
 </body>
 </html>
