@@ -31,6 +31,6 @@ Irene Huynh : Implemented the contacts and suggested schedules use cases and wor
 
 Nancy Hu : Implemented home page and worked on the choose new schedule usecase and project documentation.
 
-Salome Mahmoud : Implemented login/sign-up and invitation functionality and organized the use cases. 
+Salome Mahmoud : Implemented login, sign-up and invitation functionality and organized the use cases. 
 
 Tara Chakkithara : Implemented the create calendar use case and worked on functionality to view all calendars.
