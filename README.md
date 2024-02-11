@@ -27,7 +27,7 @@ Users can keep track of their meeting invites and also remind other users to fil
 - Java Script
 
 ## Contributors :
-Irene Huynh : Implemented the suggested schedules use case.
+Irene Huynh : Implemented the contacts and suggested schedules use cases and worked on page responsiveness.
 
 Nancy Hu : Implemented login functionality and worked on the choose new schedule usecase. 
 
