@@ -247,6 +247,10 @@ a:hover {
     font-weight: bold;
     color: #7268a2; 
     width: 400px;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 .invisible-contact-card {
