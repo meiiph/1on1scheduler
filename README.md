@@ -29,10 +29,8 @@ Users can keep track of their meeting invites and also remind other users to fil
 ## Contributors :
 Irene Huynh : Implemented the contacts and suggested schedules use cases and worked on page responsiveness.
 
-Nancy Hu : Implemented login functionality and worked on the choose new schedule usecase. 
+Nancy Hu : Implemented home page and worked on the choose new schedule usecase and project documentation.
 
-Salome Mahmoud : Implemented invitation functionality and worked on the update contacts usecase. 
+Salome Mahmoud : Implemented login/sign-up and invitation functionality and organized the use cases. 
 
 Tara Chakkithara : Implemented the create calendar use case and worked on functionality to view all calendars.
-
-
