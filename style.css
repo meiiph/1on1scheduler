@@ -338,7 +338,13 @@ a:hover {
 
 .contacts-button:hover {
     /* background-color: #8bc8e9; */
-    background-color: #7ec0e3;
+
+    /* background-color: #7ec0e3; */
+    background-color: #a2daf0;
+}
+
+.contacts-button a:hover{
+    color: #007bff;
 }
 
 .contacts-button a {
@@ -379,12 +385,11 @@ a:hover {
 
 .contacts-submit-button:hover {
     /* background-color: #8bc8e9; */
-    background-color: #7ec0e3;
-}
 
-/* #addContactForm input{
-    color: white;
-} */
+    /* background-color: #7ec0e3; */
+    background-color: #a2daf0;
+    color: #007bff;
+}
 
 #addContactForm input#name, input#email{
     color: black;
@@ -674,13 +679,22 @@ button {
 }
 
 .send-invite-button:hover {
-    background-color: #78bfe6;
+    /* background-color: #78bfe6; */
+    background-color: #a2daf0;
 }
 
 .send-invite-button a {
     margin: 0;
     padding:0;
     color: white;
+}
+
+.send-invite-button a:hover {
+    color: #007bff;
+}
+
+input.send-invite-button:hover {
+    color: #007bff;
 }
 
 .send-invite-button a::before {
@@ -765,10 +779,10 @@ td, th {
 
 .status a {
     color: #5e548e;
-    /* text-decoration: underline; */
     background-color: #9dd9f3;
     border-radius: 20px;
     margin: 8px;
+    padding: 14px;
 }
 
 .status a:hover {

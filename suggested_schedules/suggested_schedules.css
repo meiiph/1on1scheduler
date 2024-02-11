@@ -199,12 +199,15 @@ button {
 
 .prev-next-button:hover {
     /* background-color: #8bc8e9; */
-    background-color: #7ec0e3;
     /* background-color: #78bfe6; */
+
+    /* background-color: #7ec0e3; */
+    background-color: #a2daf0;
 }
 
 .prev-next-button a:hover {
-    color:white;
+    /* color:white; */
+    color: #007bff;
 }
 
 /* button {
