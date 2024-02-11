@@ -26,3 +26,13 @@ Users can keep track of their meeting invites and also remind other users to fil
 - CSS
 - Java Script
 
+## Contributors :
+Irene Huynh : Implemented the suggested schedules use case.
+
+Nancy Hu : Implemented login functionality and worked on the choose new schedule usecase. 
+
+Salome Mahmoud : Implemented invitation functionality and worked on the update contacts usecase. 
+
+Tara Chakkithara : Implemented the create calendar use case and worked on functionality to view all calendars.
+
+
