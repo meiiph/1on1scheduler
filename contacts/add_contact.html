@@ -1,5 +1,6 @@
+<!-- The page that appears when you click on the button to add a new contact on the contacts page. -->
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
 </head>
 
 <body>
+    <!-- Navigation bar at the top of the page. -->
     <nav>
         <a class="logo" href="../login/login-home.html">1on1 Scheduler</a>
         <a href="contacts.html">Contacts</a>
@@ -17,10 +19,13 @@
     </nav>
     <h2>Contacts</h2>
 
+    <!-- Search bar, with proper functionality to be implemented later in later phases. -->
     <form id="searchForm" method="GET">
         <input type="text" id="searchInput" name="search_query" placeholder="Search for a user...">
     </form>
 
+    <!-- A form contained in a contact card that a user can use to add a new contact. -->
+    <!-- It requires the name and email address of the new contact, and can be cancelled if the user so chooses. -->
     <form id="addContactForm" action="added_new_contact.html" method="post" enctype="multipart/form-data">
         <div class="contacts-container">
             <div class="contact-card">
@@ -39,6 +44,7 @@
                     </div>
             </div>
 
+            <!-- The remaining contact cards of contacts that the user has already added. -->
             <div class="contact-card">
                 <a>John Smith</a>
                 <p>john.smith@gmail.com</p>
@@ -79,8 +85,9 @@
                 <p>theresa.anderson@gmail.com</p>
             </div>
         </div>
-    <form>
+    </form>
     
+    <!-- Footer to prevent elements sticking to the bottom of the page. -->
     <footer></footer>
 </body>
 

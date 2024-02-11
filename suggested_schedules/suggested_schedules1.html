@@ -1,5 +1,7 @@
+<!-- The first out of four pages of suggested schedules that the website creates,
+given both users' availabilities and top three meeting time choices. -->
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +11,7 @@
     <title>Suggested Schedules</title>
 </head>
 <body>
+    <!-- Navigation bar at the top of the page. -->
     <nav>
         <a class="logo" href="../login/login-home.html">1on1 Scheduler</a>
         <a href="../contacts/contacts.html">Contacts</a>
@@ -18,20 +21,23 @@
     
     <h2>Suggested Schedules</h2>
 
-    <h3>Choose from the following suggested schedules or go back to customize your own</h3>
+    <h3>Choose from the following suggested schedules, or go back to customize your own.</h3>
 
+    <!-- The button for a user to go manually choose their own meeting time slot. -->
     <div class="prev-next-buttons-container">
         <button class="prev-next-button"><a href="../invitation/choose_new.html">Back</a></button>
     </div>
 
     <p>1 of 4</p>
 
+    <!-- The buttons for a user to pick between going back, selecting, or going to the next suggested meeting time slot. -->
     <div class="prev-next-buttons-container">
         <button class="prev-next-button disabled-button"><a>Previous</a></button>
         <button class="prev-next-button"><a href="../invitation/statuses.html">Choose</a></button>
         <button class="prev-next-button"><a href="suggested_schedules2.html">Next</a></button>
     </div>
 
+    <!-- The table that displays the suggested meeting time for the user to choose. -->
     <div class="suggested-schedules-container">
         <table>
             <tr id="daysoftheweek">
@@ -284,6 +290,8 @@
             </tr>
         </table>
     </div>
+
+    <!-- Footer to prevent elements sticking to the bottom of the page. -->
     <footer></footer>
 </body>
 </html>

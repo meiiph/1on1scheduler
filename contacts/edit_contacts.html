@@ -1,5 +1,7 @@
+<!-- This page allows the user to edit their contacts. -->
+<!-- Currently, only the user's contact can be edited, but this functionality will be extended to all contacts in later phases. -->
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +11,7 @@
 </head>
 
 <body>
+    <!-- Navigation bar at the top of the page. -->
     <nav>
         <a class="logo" href="../login/login-home.html">1on1 Scheduler</a>
         <a href="contacts.html">Contacts</a>
@@ -17,6 +20,7 @@
     </nav>
     <h2>Contacts</h2>
 
+    <!-- Search bar, with proper functionality to be implemented later in later phases. -->
     <form id="searchForm" method="GET">
         <input type="text" id="searchInput" name="search_query" placeholder="Search for a user...">
     </form>
@@ -32,6 +36,7 @@
     </button>
 
     <div class="contacts-container">
+        <!-- The (currently only) contact card that can be edited. -->
         <div class="contact-card">
             <a href="edit_one_contact.html">Karen Johnson (You)</a>
             <p>karen.johnson@gmail.com</p>
@@ -82,6 +87,8 @@
             <p>theresa.anderson@gmail.com</p>
         </div>
     </div>
+
+    <!-- Footer to prevent elements sticking to the bottom of the page. -->
     <footer></footer>
 </body>
 

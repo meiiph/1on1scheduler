@@ -1,5 +1,6 @@
+<!-- A page displaying the text and button that will bring a user to an invitation pop-up. -->
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +14,9 @@
 
     <h2>Invitation</h2>
 
+    <!-- A button that will open the invitation pop-up. -->
     <button id="openPopup">Invite someone !</button>
-
+    <!-- The following pop-up appears when a user wants to invite someone to a meeting. -->
     <div id="popup" class="popup">
       <div class="popup-content">
         <span class="close" id="closePopup">&times;</span>
@@ -32,6 +34,11 @@
     </form>
     </div>
     </div>
+
+    <!-- Footer to prevent elements sticking to the bottom of the page. -->
     <footer></footer>
+
+    <!-- The JavaScript file that will make the pop-up appear when the button is clicked. -->
     <script src="script.js"></script>
+</body>
 </html>

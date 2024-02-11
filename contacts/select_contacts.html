@@ -1,5 +1,6 @@
+<!-- The page that the user is brought to when they click the button to edit their current contacts. -->
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
 </head>
 
 <body>
+    <!-- Navigation bar at the top of the page. -->
     <nav>
         <a class="logo" href="../login/login-home.html">1on1 Scheduler</a>
         <a href="contacts.html">Contacts</a>
@@ -17,10 +19,15 @@
     </nav>
     <h2>Contacts</h2>
 
+    <!-- Search bar, with proper functionality to be implemented later in later phases. -->
     <form id="searchForm" method="GET">
         <input type="text" id="searchInput" name="search_query" placeholder="Search for a user...">
     </form>
 
+    <!-- From here, each contact "card" now has a checkbox that the user can click to select a given contact. -->
+    <!-- This leads to the user being able to delete the given contact(s) that were selected. -->
+    <!-- Currently leads back to contacts.html, since that page does not contain the "Alex Donald" contact card. -->
+    <!-- The proper deleting functionality will be changed in later phases. -->
     <form action="contacts.html" method="post" enctype="multipart/form-data">
         <div class="contacts-back-button">
             <button class="contacts-button" type="button">
@@ -103,6 +110,8 @@
             </div>
         </div>
     </form>
+
+    <!-- Footer to prevent elements sticking to the bottom of the page. -->
     <footer></footer>
 </body>
 

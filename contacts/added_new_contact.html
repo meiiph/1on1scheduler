@@ -1,5 +1,7 @@
+<!-- The (currently static) page that the user is brought to with the new contact they just added. -->
+<!-- This proper functionality will be implemented in later phases. -->
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +11,7 @@
 </head>
 
 <body>
+    <!-- Navigation bar at the top of the page. -->
     <nav>
         <a class="logo" href="../login/login-home.html">1on1 Scheduler</a>
         <a href="contacts.html">Contacts</a>
@@ -17,6 +20,7 @@
     </nav>
     <h2>Contacts</h2>
 
+    <!-- Search bar, with proper functionality to be implemented later in later phases. -->
     <form id="searchForm" method="GET">
         <input type="text" id="searchInput" name="search_query" placeholder="Search for a user...">
     </form>
@@ -32,16 +36,19 @@
     </button>
 
     <div class="contacts-container">
+        <!-- The user's own contact card. -->
         <div class="contact-card">
             <a href="edit_contact.html">Karen Johnson (You)</a>
             <p>karen.johnson@gmail.com</p>
         </div>
         
+        <!-- The newly added contact. -->
         <div class="contact-card">
             <a href="../invitation/invitation.html">Alex Donald</a>
             <p>alex.donald@gmail.com</p>
         </div>
         
+        <!-- The previous contacts are below. -->
         <div class="contact-card">
             <a href="../invitation/invitation.html">John Smith</a>
             <p>john.smith@gmail.com</p>
@@ -83,6 +90,7 @@
         </div>
     </div>
     
+    <!-- Footer to prevent elements sticking to the bottom of the page. -->
     <footer></footer>
 </body>
 

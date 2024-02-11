@@ -1,3 +1,4 @@
+<!-- A (currently static) page for the user to pick other meeting times for their meeting, if the suggested meeting times aren't sufficient. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
     <title>New Availabilities</title>
 </head>
 <body>
+    <!-- Navigation bar at the top of the page. -->
     <nav>
         <a class="logo" href="../login/login-home.html">1on1 Scheduler</a>
         <a href="../contacts/contacts.html">Contacts</a>
@@ -16,12 +18,15 @@
     </nav>
 
     <h2>Here are the times you are both available.</h2>
-    <h3>From the calendar below, please pick what time is best for you or see our suggested schedules</h3>
+    <h3>From the calendar below, please pick what time is best for you, or see the suggested schedules.</h3>
 
+    <!-- A button to take the user to the suggested schedules page. -->
     <div class="suggested-button-container">
         <a class="choose_button" href="../suggested_schedules/suggested_schedules1.html">Suggested Schedules</a>
     </div>
 
+    <!-- A calendar table for the user to pick another time for their meeting. -->
+    <!-- The proper functionality of selecting a time slot will be implemented in later phases. -->
     <div class="choose-available-container">
         <table class="calendar">
             <tr id="daysoftheweek">
@@ -275,12 +280,15 @@
         </table>
     </div>
     
+    <!-- A button panel to take the user to the previous page or the next page. -->
     <div class="back-next-buttons-container">
         <!-- <div class="choose_div"><a class="choose_button" href="choose_new2.html">Next</a></div>
         <div class="choose_div2"><a class="choose_button" href="../login/login-home.html">Back</a></div> -->
         <a class="choose_button" href="../login/login-home.html">Back</a>
         <a class="choose_button" href="choose_new2.html">Next</a>
     </div>
+
+    <!-- Footer to prevent elements sticking to the bottom of the page. -->
     <footer></footer>
 </body>
 </html>
