@@ -1,3 +1,6 @@
+/* The CSS code specifically for the calendars that suggest given meeting times for users,
+after both their availabilities and top three meeting preferences are known. */
+
 /* body {
     background-color: rgb(209, 224, 238);
     display: flex;
