@@ -1,3 +1,3 @@
-source P2/bin/activate
+source venv/bin/activate
 
 python manage.py runserver
