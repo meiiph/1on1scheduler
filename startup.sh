@@ -19,11 +19,11 @@ if [ ! -f "OneOnOne/settings_local.py" ]; then
     cp OneOnOne/settings_local.example.py OneOnOne/settings_local.py
 fi
 
-sed -i "s/'NAME': 'db_name',/'NAME': 'your_database_name',/g" OneOnOne/settings_local.py
-sed -i "s/'USER': 'db_user',/'USER': 'your_database_user',/g" OneOnOne/settings_local.py
-sed -i "s/'PASSWORD': 'db_password',/'PASSWORD': 'your_database_password',/g" OneOnOne/settings_local.py
-sed -i "s/'HOST': 'localhost',/'HOST': 'your_database_host',/g" OneOnOne/settings_local.py
-sed -i "s/'PORT': '5432',/'PORT': 'your_database_port',/g" OneOnOne/settings_local.py
+#sed -i "s/'NAME': 'db_name',/'NAME': 'oneonone',/g" OneOnOne/settings_local.py
+#sed -i "s/'USER': 'db_user',/'USER': 'your_database_user',/g" OneOnOne/settings_local.py
+#sed -i "s/'PASSWORD': 'db_password',/'PASSWORD': 'your_database_password',/g" OneOnOne/settings_local.py
+#sed -i "s/'HOST': 'localhost',/'HOST': 'your_database_host',/g" OneOnOne/settings_local.py
+#sed -i "s/'PORT': '5432',/'PORT': 'your_database_port',/g" OneOnOne/settings_local.py
 
 sed -i "/INSTALLED_APPS = \[/a \ \ \ \ 'rest_framework'," OneOnOne/settings_local.py
 sed -i "/INSTALLED_AP
