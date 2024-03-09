@@ -4,4 +4,4 @@ from .models import Calendar
 class CalendarSerializer(serializers.ModelSerializer):
     class Meta:
         model = Calendar
-        fields = ['id', 'user']  
+        fields = ['id', 'user', 'name']  
