@@ -37,13 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'REST_FRAMEWORK'
+    'rest_framework',
     'contacts',
     'accounts',
     'calendars',
     'invitations',
     'schedules',
-    'oneonone'
+    'oneonone',
 ]
 
 MIDDLEWARE = [
