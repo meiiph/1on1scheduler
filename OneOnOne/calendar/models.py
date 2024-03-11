@@ -36,11 +36,8 @@ class Event(models.Model):
     attendee_limit = models.PositiveIntegerField(null=True, blank=True)
 
 class Invitation(models.Model):
-    INVITATION_TYPES = [
-        ('MODERATOR', 'Moderator'),
-        ('SUBSCRIBER', 'Subscriber'),
-    ]
     sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sent_invitations')
     recipient = models.ForeignKey(User, on_delete=models.CASCADE, related_name='received_invitations')
     calendar = models.ForeignKey(Calendar, on_delete=models.CASCADE, related_name='invitations')
-    status = models.CharField(max_length=100, choices=INVITATION_TYPES)
+    meeting_datetime = models.DateTimeField()
+    is_accepted = models.BooleanField(default=False, verbose_name="Accept Invitation")

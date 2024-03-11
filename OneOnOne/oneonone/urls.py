@@ -22,8 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('calendars/', include('calendars.urls')),
+    path('calendar/', include('calendar.urls')),
     path('contacts/', include('contacts.urls')),
-    path('invitations/', include('invitations.urls')),
+    # path('invitations/', include('invitations.urls')),
     path('schedules/', include('schedules.urls')),
     path('', TemplateView.as_view(template_name='accounts/login.html'), name='home'),  # Set homepage to login.html
 ]
