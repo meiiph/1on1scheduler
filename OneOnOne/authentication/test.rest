@@ -1,10 +1,10 @@
-GET http://127.0.0.1:8000/auth/signup
+GET http://127.0.0.1:8000/auth/signup/
 Content-Type: application/json
 
 ###
 
 # should create a new user
-POST http://127.0.0.1:8000/auth/signup
+POST http://127.0.0.1:8000/auth/signup/
 Content-Type: application/json
 
 {
@@ -18,7 +18,7 @@ Content-Type: application/json
 
 ### 
 
-POST http://127.0.0.1:8000/auth/signup
+POST http://127.0.0.1:8000/auth/signup/
 Content-Type: application/json
 
 {
@@ -33,7 +33,7 @@ Content-Type: application/json
 ###
 
 # should prompt a password error
-POST http://127.0.0.1:8000/auth/signup
+POST http://127.0.0.1:8000/auth/signup/
 Content-Type: application/json
 
 {
@@ -47,7 +47,7 @@ Content-Type: application/json
 ###
 
 # should prompt an existing user error
-POST http://127.0.0.1:8000/auth/signup
+POST http://127.0.0.1:8000/auth/signup/
 Content-Type: application/json
 
 {
@@ -62,12 +62,12 @@ Content-Type: application/json
 ###
 
 
-GET http://127.0.0.1:8000/auth/login
+GET http://127.0.0.1:8000/auth/login/
 Content-Type: application/json
 
 ###
 
-POST http://127.0.0.1:8000/auth/login
+POST http://127.0.0.1:8000/auth/login/
 Content-Type: application/json
 
 {
@@ -77,7 +77,7 @@ Content-Type: application/json
 
 ###
 
-POST http://127.0.0.1:8000/auth/login
+POST http://127.0.0.1:8000/auth/login/
 Content-Type: application/json
 
 {
@@ -88,7 +88,7 @@ Content-Type: application/json
 
 ###
 
-POST http://127.0.0.1:8000/auth/logout
+POST http://127.0.0.1:8000/auth/logout/
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwMTgzNjY5LCJpYXQiOjE3MTAxODMzNjksImp0aSI6ImU5ODg1N2I0NGZiMDRlNzhhMGViZmE4YTkzNjM1ZWYyIiwidXNlcl9pZCI6MX0.X_qD5V78C04zLs4jBdFV4K3k_QKm3tZQ35UBOZTdtu8
 
