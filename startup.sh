@@ -6,6 +6,8 @@ pip install --upgrade pip
 
 pip install django pillow djangorestframework djangorestframework_simplejwt
 
+python manage.py makemigrations
+
 python manage.py migrate
 
 if [ ! -f "secret_key.py" ]; then
