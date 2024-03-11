@@ -1,21 +1,11 @@
 from rest_framework import generics
-from .models import Calendar, Event
-from .serializers import CalendarSerializer
+from ..models import Event
 from rest_framework.response import Response
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
-from django.contrib import messages
 from django.views import View
-from .serializers import EventSerializer
+from ..serializers import EventSerializer
 from rest_framework.permissions import IsAuthenticated
-
-class CalendarListCreateView(generics.ListCreateAPIView):
-    queryset = Calendar.objects.all()
-    serializer_class = CalendarSerializer
-
-class CalendarRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Calendar.objects.all()
-    serializer_class = CalendarSerializer
 
 class EventCreateView(generics.CreateAPIView):
     queryset = Event.objects.all()

@@ -14,26 +14,12 @@ class Calendar(models.Model):
 
 
 class Event(models.Model):
-    EVENT_TYPES = [
-        ('OPEN', 'Open'),
-        ('REGISTRATION_REQUIRED', 'Registration Required'),
-    ]
-    RECCURANCES = [
-        ('NEVER', 'Never'),
-        ('DAILY', 'Daily'),
-        ('WEEKLY', 'Weekly'),
-        ('MONTHLY', 'Monthly'),
-        ('YEARLY', 'Yearly'),
-    ]
-    calendar = models.ForeignKey(Calendar, on_delete=models.CASCADE, related_name='events')
     title = models.CharField(max_length=100)
-    start_date = models.DateTimeField()
-    end_date = models.DateTimeField()
+    date = models.DateField()
     description = models.TextField()
-    recurrence = models.CharField(max_length=100, choices=RECCURANCES)
-    attending_guests = models.ManyToManyField(User, related_name='attending_events')
-    event_type = models.CharField(max_length=100, choices=EVENT_TYPES)
-    attendee_limit = models.PositiveIntegerField(null=True, blank=True)
+    time = models.TimeField()
+    organizer = models.ForeignKey(User, on_delete=models.CASCADE)
+    attendees = models.ManyToManyField(User, related_name='events_attending')
 
 class Invitation(models.Model):
     sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sent_invitations')
