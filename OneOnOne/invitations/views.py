@@ -3,33 +3,35 @@ from django.shortcuts import get_object_or_404
 from django.http import JsonResponse, HttpResponse
 from .models import Invitation
 from .serializers import InvitationSerializer
-from .models import User
+from .models import User, Calendar
 
 class InvitationListCreateView(generics.ListCreateAPIView):
     serializer_class = InvitationSerializer
 
     def get_queryset(self):
-        return Invitation.objects.filter(invitee=self.request.user)
+        return Invitation.objects.filter(recipient=self.request.user)
     
     def get(self, serializer):
-        invitations = Invitation.objects.filter(invitee=self.request.user)
+        invitations = Invitation.objects.filter(recipient=self.request.user)
         serializer = InvitationSerializer(invitations, many=True)
         # serializer.save(receiver=self.request.user)
         serializer_data = serializer.data
         for i in range(len(serializer.data)):
-            serializer_data[i]['inviter'] = User.objects.get(id=serializer_data[i]['inviter']).username
-            serializer_data[i]['invitee'] = User.objects.get(id=serializer_data[i]['invitee']).username
+            serializer_data[i]['sender'] = User.objects.get(id=serializer_data[i]['sender']).username
+            serializer_data[i]['recipient'] = User.objects.get(id=serializer_data[i]['recipient']).username
+            serializer_data[i]['calendar'] = str(serializer_data[i]['calendar']) + ", " + Calendar.objects.get(id=serializer_data[i]['calendar']).name
         return JsonResponse(serializer_data, safe=False)
     
     def post(self, request):
-        request.data['inviter'] = User.objects.get(username=request.data['inviter']).id
-        request.data['invitee'] = User.objects.get(username=request.data['invitee']).id
+        request.data['sender'] = User.objects.get(username=request.data['sender']).id
+        request.data['recipient'] = User.objects.get(username=request.data['recipient']).id
         serializer = InvitationSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             serializer_data = serializer.data
-            serializer_data['inviter'] = User.objects.get(id=serializer_data['inviter']).username
-            serializer_data['invitee'] = User.objects.get(id=serializer_data['invitee']).username
+            serializer_data['sender'] = User.objects.get(id=serializer_data['sender']).username
+            serializer_data['recipient'] = User.objects.get(id=serializer_data['recipient']).username
+            serializer_data['calendar'] = str(serializer_data['calendar']) + ", " + Calendar.objects.get(id=serializer_data['calendar']).name
             return JsonResponse(serializer_data)
         else:
             return HttpResponse('BAD REQUEST', status=400)
@@ -46,9 +48,9 @@ class InvitationRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView)
 
         serializer = InvitationSerializer(invitation)
         serializer_data = serializer.data
-        serializer_data['inviter'] = User.objects.get(id=serializer_data['inviter']).username
-        serializer_data['invitee'] = User.objects.get(id=serializer_data['invitee']).username
-
+        serializer_data['sender'] = User.objects.get(id=serializer_data['sender']).username
+        serializer_data['recipient'] = User.objects.get(id=serializer_data['recipient']).username
+        serializer_data['calendar'] = str(serializer_data['calendar']) + ", " + Calendar.objects.get(id=serializer_data['calendar']).name
         return JsonResponse(serializer_data)
         # return JsonResponse(serializer.data)
     
@@ -58,15 +60,16 @@ class InvitationRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView)
         except Invitation.DoesNotExist:
             return HttpResponse('NOT FOUND', status=404)
         
-        self.request.data['inviter'] = User.objects.get(username=self.request.data['inviter']).id
-        self.request.data['invitee'] = User.objects.get(username=self.request.data['invitee']).id
+        self.request.data['sender'] = User.objects.get(username=self.request.data['sender']).id
+        self.request.data['recipient'] = User.objects.get(username=self.request.data['recipient']).id
         serializer = InvitationSerializer(invitation, data=self.request.data)
         
         if serializer.is_valid():
             serializer.save()
             serializer_data = serializer.data
-            serializer_data['inviter'] = User.objects.get(id=serializer_data['inviter']).username
-            serializer_data['invitee'] = User.objects.get(id=serializer_data['invitee']).username
+            serializer_data['sender'] = User.objects.get(id=serializer_data['sender']).username
+            serializer_data['recipient'] = User.objects.get(id=serializer_data['recipient']).username
+            serializer_data['calendar'] = str(serializer_data['calendar']) + ", " + Calendar.objects.get(id=serializer_data['calendar']).name
             return JsonResponse(serializer_data)
         else:
             return HttpResponse('BAD REQUEST', status=400)
