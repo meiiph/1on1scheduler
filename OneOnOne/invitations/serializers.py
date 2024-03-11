@@ -4,4 +4,5 @@ from .models import Invitation
 class InvitationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Invitation
-        fields = ['id', 'inviter', 'invitee', 'meeting_datetime'] 
+        fields = ['id', 'sender', 'recipient', 'calendar', 'meeting_datetime', 'is_accepted']
+
