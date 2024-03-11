@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Calendar(models.Model):
+    name = models.CharField(max_length=500)
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='owned_calendars')
     hosts = models.ManyToManyField(User, related_name='moderated_calendars')
     guests = models.ManyToManyField(User, related_name='subscribed_calendars')
