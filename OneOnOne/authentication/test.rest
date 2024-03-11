@@ -1,0 +1,99 @@
+GET http://127.0.0.1:8000/auth/signup
+Content-Type: application/json
+
+###
+
+# should create a new user
+POST http://127.0.0.1:8000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "jenna@example.com",
+    "first_name": "Jenna",
+    "last_name": "Smith",
+    "password1": "3030JerseyShore",
+    "password2": "3030JerseyShore",
+    "username": "jenna"
+}
+
+### 
+
+POST http://127.0.0.1:8000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "michael@example.com",
+    "first_name": "Michael",
+    "last_name": "Smith",
+    "password1": "5050Brooklyn",
+    "password2": "5050Brooklyn",
+    "username": "michael"
+}
+
+###
+
+# should prompt a password error
+POST http://127.0.0.1:8000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "jason@example.com",
+    "first_name": "Jason",
+    "last_name": "Smith",
+    "password1": "4040Manhattan",
+    "username": "jason"
+}
+
+###
+
+# should prompt an existing user error
+POST http://127.0.0.1:8000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "jenna@example.com",
+    "first_name": "Jenna",
+    "last_name": "Smith",
+    "password1": "3030JerseyShore",
+    "password2": "3030JerseyShore",
+    "username": "jenna"
+}
+
+###
+
+
+GET http://127.0.0.1:8000/auth/login
+Content-Type: application/json
+
+###
+
+POST http://127.0.0.1:8000/auth/login
+Content-Type: application/json
+
+{
+    "password": "5050Brooklyn",
+    "username": "michael"
+}
+
+###
+
+POST http://127.0.0.1:8000/auth/login
+Content-Type: application/json
+
+{
+    "username": "jenna",
+    "password": "3030JerseyShore"
+
+}
+
+###
+
+POST http://127.0.0.1:8000/auth/logout
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwMTgzNjY5LCJpYXQiOjE3MTAxODMzNjksImp0aSI6ImU5ODg1N2I0NGZiMDRlNzhhMGViZmE4YTkzNjM1ZWYyIiwidXNlcl9pZCI6MX0.X_qD5V78C04zLs4jBdFV4K3k_QKm3tZQ35UBOZTdtu8
+
+{   
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxMDI2OTc2OSwiaWF0IjoxNzEwMTgzMzY5LCJqdGkiOiJjMWFhZmY1MzZiNjE0NzNmYTlkZjEzOThhN2FlNmM1MSIsInVzZXJfaWQiOjF9.L5TnxgIF35g9zROYGcVnCtIxTRJTSJUMlR1kfVsMgP4"
+}
+
+###
