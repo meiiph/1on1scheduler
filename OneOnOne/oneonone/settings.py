@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'contacts',
     'accounts',
     'calendars',
-    'calendar',
     'schedules',
     'oneonone',
     'authentication',
