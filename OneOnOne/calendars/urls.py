@@ -17,4 +17,5 @@ urlpatterns = [
     path('calendar_events/<int:calendar_id>/', CalendarEventListView.as_view(), name='calendar_events'),
     path('request_join/<int:event_id>/<int:user_id>/', EventRequestJoinView.as_view(), name='request_join'),
     path('calendars/', Calendar_View.as_view(), name='calendars'),
+    path('calendars/<int:calendar_id>/',Calendar_View.as_view(), name='calendar_fix')
 ]
