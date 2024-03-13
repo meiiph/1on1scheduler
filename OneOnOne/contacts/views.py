@@ -34,7 +34,7 @@ class ContactRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
 
     def get(self, serializer, contact_id):
         try:
-            contact = Contact.objects.get(pk=contact_id)
+            contact = Contact.objects.get(pk=contact_id, curr_user=self.request.user)
         except Contact.DoesNotExist:
             return HttpResponse('NOT FOUND', status=404)
 
@@ -43,7 +43,7 @@ class ContactRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     
     def put(self, serializer, contact_id):
         try:
-            contact = Contact.objects.get(pk=contact_id)
+            contact = Contact.objects.get(pk=contact_id, curr_user=self.request.user)
         except Contact.DoesNotExist:
             return HttpResponse('NOT FOUND', status=404)
 
@@ -57,7 +57,7 @@ class ContactRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
 
     def delete(self, serializer, contact_id):
         try:
-            contact = Contact.objects.get(pk=contact_id)
+            contact = Contact.objects.get(pk=contact_id, curr_user=self.request.user)
         except Contact.DoesNotExist:
             return HttpResponse('NOT FOUND', status=404)
         
