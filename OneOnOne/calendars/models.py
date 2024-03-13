@@ -6,8 +6,6 @@ class Calendar(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='owned_calendars')
     hosts = models.ManyToManyField(User, related_name='moderated_calendars')
     guests = models.ManyToManyField(User, related_name='subscribed_calendars')
-    start_date = models.DateField()
-    end_date = models.DateField()
     description = models.TextField()
     pending_hosts = models.ManyToManyField(User, related_name='pending_moderator_calendars')
     pending_guests = models.ManyToManyField(User, related_name='pending_subscriber_calendars')

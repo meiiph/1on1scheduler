@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 from .views.invitations import ReceivedInvitationListCreateView, SentInvitationListCreateView, ReceivedInvitationRetrieveUpdateDestroyView, SentInvitationRetrieveUpdateDestroyView
 from .views.events import UserEventListView, EventAddAttendeeView, CalendarEventListView, EventCreateView, EventRemoveAttendeeView, EventCancelView, EventRequestJoinView
+from .views.calendars import Calendar_View
 
 urlpatterns = [
     path('received_invitations/', ReceivedInvitationListCreateView.as_view(), name='received-invitation-list-create'),
@@ -15,4 +16,5 @@ urlpatterns = [
     path('cancel_event/<int:event_id>/', EventCancelView.as_view(), name='cancel_event'),
     path('calendar_events/<int:calendar_id>/', CalendarEventListView.as_view(), name='calendar_events'),
     path('request_join/<int:event_id>/<int:user_id>/', EventRequestJoinView.as_view(), name='request_join'),
+    path('calendars/', Calendar_View.as_view(), name='calendars'),
 ]
