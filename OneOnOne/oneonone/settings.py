@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'contacts',
     'calendars',
-    'schedules',
     'oneonone',
     'authentication',
     'rest_framework_simplejwt',
