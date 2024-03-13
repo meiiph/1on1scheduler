@@ -1,11 +1,52 @@
-from rest_framework.decorators import api_view, permission_classes
+from rest_framework.decorators import permission_classes
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
 from ..models import Calendar
-from ..serializers import CalendarSerializer
+from ..serializers import Calendar_Serializer
 from rest_framework import status
 
 
+class Calendar_View(APIView):
+    permission_classes = [IsAuthenticated]
+    def get(self, request):
+        """
+        allows a user to get calendars that they own, host, or subscribe to as a guest. 
+        if a list of calendar ids are provided as query parameters, view selected only. 
+        """
+        serializer = Calendar_Serializer 
+        user = request.user 
+        calendar_ids = request.query_params.getlist('calendar_ids')
+
+        if calendar_ids is None:
+            owned_calendars = Calendar.objects.filter(owner=user)
+            host_calendars = Calendar.objects.filter(hosts=user)
+            guest_calendars = Calendar.objects.filter(guests=user)
+
+            total = owned_calendars | host_calendars | guest_calendars
+            serializer = Calendar_Serializer(total, many=True, context={'request': request})
+
+            return Response(serializer.data)
+        # if the user specifies a list of calendars
+        else :
+            calendars = Calendar.objects.filter(id__in=calendar_ids)
+            serializer = Calendar_Serializer(calendars, many=True, context={'request': request})
+            return Response(serializer.data)
+
+
+    def post():
+        pass
+    def put():
+        pass
+
+    def delete():
+        pass
+    def patch():
+        pass
+
+
+
+'''
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def view_all(request):
@@ -17,7 +58,7 @@ def view_all(request):
     subscribed_calendars = Calendar.objects.filter(guests=request.user)
 
     total_calendars = owned_calendars | moderated_calendars | subscribed_calendars
-    serializer = CalendarSerializer(total_calendars, many=True)
+    serializer = Calendar_Serializer(total_calendars, many=True)
     return Response(serializer.data)
 
 
@@ -285,4 +326,4 @@ def update_description(request, calendar_id):
     
 ### add functionality to change total availability of a calendar. 
 ### how to handle events when a new host is added?
-    
+'''
