@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from rest_framework.serializers import DateTimeField
 from .models import Calendar, Invitation, Event
 from django.contrib.auth.models import User
 
@@ -47,10 +48,43 @@ class Create_Calendar_Serializer(serializers.Serializer):
         return Calendar.objects.create(**validated_data)
 
 
-class InvitationSerializer(serializers.ModelSerializer):
+class ReceivedInvitationSerializer(serializers.ModelSerializer):
+    sender = serializers.SlugRelatedField(
+        slug_field='username',
+        read_only = True,
+    )
+    recipient = serializers.SlugRelatedField(
+        slug_field='username',
+        read_only = True,
+    )
+    calendar = serializers.SlugRelatedField(
+        slug_field='name',
+        read_only = True,
+    )
+
     class Meta:
         model = Invitation
         fields = ['id', 'sender', 'recipient', 'calendar', 'meeting_datetime', 'is_accepted']
+        read_only_fields = ['id', 'sender', 'recipient', 'calendar', 'meeting_datetime']
+
+class SentInvitationSerializer(serializers.ModelSerializer):
+    sender = serializers.SlugRelatedField(
+        slug_field='username',
+        read_only = True,
+    )
+    recipient = serializers.SlugRelatedField(
+        slug_field='username',
+        queryset=User.objects.all(),
+    )
+    calendar = serializers.SlugRelatedField(
+        slug_field='name',
+        queryset=Calendar.objects.all(),
+    )
+
+    class Meta:
+        model = Invitation
+        fields = ['id', 'sender', 'recipient', 'calendar', 'meeting_datetime', 'is_accepted']
+        read_only_fields = ['id', 'sender', 'is_accepted']
 
 class EventSerializer(serializers.ModelSerializer):
     organizer = serializers.SlugRelatedField(
