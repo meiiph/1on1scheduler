@@ -46,6 +46,7 @@ class EventAddAttendeeView(generics.UpdateAPIView):
         instance.attendees.add(attendee)
         return Response(self.get_serializer(instance).data)
 
+
 class EventRemoveAttendeeView(generics.UpdateAPIView):
     serializer_class = EventSerializer
     authentication_classes = [JWTAuthentication]
@@ -66,17 +67,7 @@ class EventRemoveAttendeeView(generics.UpdateAPIView):
             return Response({'message': f'Attendee with ID {user_id} removed from event with ID {instance.id}'}, status=status.HTTP_204_NO_CONTENT)
         else:
             return Response({'error': f'Attendee with ID {user_id} is not registered for event with ID {instance.id}'}, status=status.HTTP_400_BAD_REQUEST)
-        
-class EventCancelView(generics.UpdateAPIView):
-    queryset = Event.objects.all()
-    serializer_class = EventSerializer
-    authentication_classes = [JWTAuthentication]
-    permission_classes = [IsAuthenticated]
 
-    def patch(self, request, *args, **kwargs):
-        instance = self.get_object()
-        instance.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
 
 class EventRequestJoinView(generics.UpdateAPIView):
     serializer_class = EventSerializer
@@ -95,9 +86,29 @@ class EventRequestJoinView(generics.UpdateAPIView):
         instance.attendees.add(attendee)
         return Response(self.get_serializer(instance).data)
     
+class EventCancelView(generics.UpdateAPIView):
+    queryset = Event.objects.all()
+    serializer_class = EventSerializer
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    def patch(self, request, *args, **kwargs):
+        instance = self.get_object()
+        instance.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    
 class UserEventListView(generics.ListAPIView):
     serializer_class = EventSerializer
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         return Event.objects.filter(organizer=self.request.user)
+
+class CalendarEventListView(generics.ListAPIView):
+    serializer_class = EventSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        calendar_id = self.kwargs['calendar_id']
+        return Event.objects.filter(calendar__id=calendar_id)
