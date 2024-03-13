@@ -1,11 +1,14 @@
 from rest_framework import generics
-from django.shortcuts import get_object_or_404
 from django.http import JsonResponse, HttpResponse
 from ..models import Invitation, User, Calendar
 from ..serializers import InvitationSerializer
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.authentication import JWTAuthentication
 
 class InvitationListCreateView(generics.ListCreateAPIView):
     serializer_class = InvitationSerializer
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         return Invitation.objects.filter(recipient=self.request.user)
@@ -37,6 +40,8 @@ class InvitationListCreateView(generics.ListCreateAPIView):
 
 class InvitationRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = InvitationSerializer 
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
 
     def get(self, serializer, invitation_id):
         try:
