@@ -26,14 +26,14 @@ class ContactListCreateView(generics.ListCreateAPIView):
         try:
             user_id = User.objects.get(username=request.data['contact_user']).id  
         except User.DoesNotExist:
-            return HttpResponse('USER DOES NOT EXIST', status=404)
+            return HttpResponse('BAD REQUEST: USER DOES NOT EXIST', status=400)
         
         if serializer.is_valid():
             try:
                 user = User.objects.get(id=user_id) 
                 potential_contact = Contact.objects.get(curr_user=self.request.user, contact_user=user)
                 if potential_contact is not None:
-                    return HttpResponse('USER ALREADY IN CONTACTS', status=200)
+                    return HttpResponse('BAD REQUEST: USER ALREADY IN CONTACTS', status=400)
             except Contact.DoesNotExist:
                 # new_contact = Contact(curr_user=self.request.user, contact_user=user, name=request.data['name'], email=request.data['email'])
                 # new_contact.save()
