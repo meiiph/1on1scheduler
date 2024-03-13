@@ -91,6 +91,7 @@ class EventCancelView(generics.UpdateAPIView):
     serializer_class = EventSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
+    lookup_url_kwarg = 'event_id'
 
     def patch(self, request, *args, **kwargs):
         instance = self.get_object()
