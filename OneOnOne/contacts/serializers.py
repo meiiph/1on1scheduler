@@ -9,8 +9,18 @@ class ContactSerializer(serializers.ModelSerializer):
     # )
     contact_user = serializers.SlugRelatedField(
         slug_field='username',
+        # read_only = True,
+        queryset=User.objects.all(),
+    )
+
+    class Meta:
+        model = Contact
+        fields = ['id', 'contact_user', 'name', 'email'] 
+
+class UpdateContactSerializer(serializers.ModelSerializer):
+    contact_user = serializers.SlugRelatedField(
+        slug_field='username',
         read_only = True,
-        # queryset=User.objects.all(),
     )
 
     class Meta:
