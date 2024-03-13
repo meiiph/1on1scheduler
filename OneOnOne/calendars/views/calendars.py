@@ -41,9 +41,25 @@ class Calendar_View(APIView):
 
     def delete():
         pass
-    def patch():
-        pass
-
+    def patch(self, request, calendar_id):
+        try:
+            calendar = Calendar.objects.get(id=calendar_id)
+        except Calendar.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        
+        pending_hosts = request.data.get('pending_hosts')
+        pending_guests = request.data.get('pending_guests')
+        
+        if pending_hosts is not None:
+            calendar.pending_hosts = pending_hosts
+        
+        if pending_guests is not None:
+            calendar.pending_guests = pending_guests
+        
+        calendar.save()
+        
+        return Response(status=status.HTTP_200_OK)
+        
 
 
 '''
