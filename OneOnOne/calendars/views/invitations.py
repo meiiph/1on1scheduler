@@ -1,86 +1,117 @@
 from rest_framework import generics
 from django.http import JsonResponse, HttpResponse
 from ..models import Invitation, User, Calendar
-from ..serializers import InvitationSerializer
+from ..serializers import ReceivedInvitationSerializer, SentInvitationSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
 
-class InvitationListCreateView(generics.ListCreateAPIView):
-    serializer_class = InvitationSerializer
+class ReceivedInvitationListCreateView(generics.ListCreateAPIView):
+    serializer_class = ReceivedInvitationSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        return Invitation.objects.filter(recipient=self.request.user)
+        return Invitation.objects.filter(recipient=self.request.user, is_accepted=False)
     
     def get(self, serializer):
-        invitations = Invitation.objects.filter(recipient=self.request.user)
-        serializer = InvitationSerializer(invitations, many=True)
-        # serializer.save(receiver=self.request.user)
-        serializer_data = serializer.data
-        for i in range(len(serializer.data)):
-            serializer_data[i]['sender'] = User.objects.get(id=serializer_data[i]['sender']).username
-            serializer_data[i]['recipient'] = User.objects.get(id=serializer_data[i]['recipient']).username
-            serializer_data[i]['calendar'] = str(serializer_data[i]['calendar']) + ", " + Calendar.objects.get(id=serializer_data[i]['calendar']).name
-        return JsonResponse(serializer_data, safe=False)
-    
-    def post(self, request):
-        request.data['sender'] = User.objects.get(username=request.data['sender']).id
-        request.data['recipient'] = User.objects.get(username=request.data['recipient']).id
-        serializer = InvitationSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            serializer_data = serializer.data
-            serializer_data['sender'] = User.objects.get(id=serializer_data['sender']).username
-            serializer_data['recipient'] = User.objects.get(id=serializer_data['recipient']).username
-            serializer_data['calendar'] = str(serializer_data['calendar']) + ", " + Calendar.objects.get(id=serializer_data['calendar']).name
-            return JsonResponse(serializer_data)
-        else:
-            return HttpResponse('BAD REQUEST', status=400)
+        invitations = Invitation.objects.filter(recipient=self.request.user, is_accepted=False)
+        serializer = ReceivedInvitationSerializer(invitations, many=True)
+        return JsonResponse(serializer.data, safe=False)
 
-class InvitationRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    serializer_class = InvitationSerializer 
+class ReceivedInvitationRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = ReceivedInvitationSerializer 
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
 
     def get(self, serializer, invitation_id):
         try:
-            invitation = Invitation.objects.get(pk=invitation_id)
+            invitation = Invitation.objects.get(pk=invitation_id, recipient=self.request.user, is_accepted=False)
         except Invitation.DoesNotExist:
             return HttpResponse('NOT FOUND', status=404)
-        # invitation = get_object_or_404(Invitation, pk=invitation_id)
 
-        serializer = InvitationSerializer(invitation)
-        serializer_data = serializer.data
-        serializer_data['sender'] = User.objects.get(id=serializer_data['sender']).username
-        serializer_data['recipient'] = User.objects.get(id=serializer_data['recipient']).username
-        serializer_data['calendar'] = str(serializer_data['calendar']) + ", " + Calendar.objects.get(id=serializer_data['calendar']).name
-        return JsonResponse(serializer_data)
-        # return JsonResponse(serializer.data)
+        serializer = ReceivedInvitationSerializer(invitation)
+        return JsonResponse(serializer.data)
     
     def put(self, serializer, invitation_id):
         try:
-            invitation = Invitation.objects.get(pk=invitation_id)
+            invitation = Invitation.objects.get(pk=invitation_id, recipient=self.request.user, is_accepted=False)
         except Invitation.DoesNotExist:
             return HttpResponse('NOT FOUND', status=404)
         
-        self.request.data['sender'] = User.objects.get(username=self.request.data['sender']).id
-        self.request.data['recipient'] = User.objects.get(username=self.request.data['recipient']).id
-        serializer = InvitationSerializer(invitation, data=self.request.data)
+        serializer = ReceivedInvitationSerializer(invitation, data=self.request.data)
         
         if serializer.is_valid():
             serializer.save()
-            serializer_data = serializer.data
-            serializer_data['sender'] = User.objects.get(id=serializer_data['sender']).username
-            serializer_data['recipient'] = User.objects.get(id=serializer_data['recipient']).username
-            serializer_data['calendar'] = str(serializer_data['calendar']) + ", " + Calendar.objects.get(id=serializer_data['calendar']).name
-            return JsonResponse(serializer_data)
+            
+            # if serializer.data['is_accepted'] == True:
+            #     invitation.delete()
+
+            return JsonResponse(serializer.data)
         else:
             return HttpResponse('BAD REQUEST', status=400)
 
     def delete(self, serializer, invitation_id):
         try:
-            invitation = Invitation.objects.get(pk=invitation_id)
+            invitation = Invitation.objects.get(pk=invitation_id, recipient=self.request.user, is_accepted=False)
+        except Invitation.DoesNotExist:
+            return HttpResponse('NOT FOUND', status=404)
+        
+        invitation.delete()
+        return HttpResponse('NO CONTENT', status=204)
+
+
+class SentInvitationListCreateView(generics.ListCreateAPIView):
+    serializer_class = SentInvitationSerializer
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return Invitation.objects.filter(sender=self.request.user)
+    
+    def get(self, serializer):
+        invitations = Invitation.objects.filter(sender=self.request.user)
+        serializer = SentInvitationSerializer(invitations, many=True)
+        return JsonResponse(serializer.data, safe=False)
+    
+    def post(self, request):
+        serializer = SentInvitationSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save(sender=self.request.user)
+            return JsonResponse(serializer.data)
+        else:
+            return HttpResponse('BAD REQUEST', status=400)
+
+class SentInvitationRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = SentInvitationSerializer 
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    def get(self, serializer, invitation_id):
+        try:
+            invitation = Invitation.objects.get(pk=invitation_id, sender=self.request.user)
+        except Invitation.DoesNotExist:
+            return HttpResponse('NOT FOUND', status=404)
+
+        serializer = SentInvitationSerializer(invitation)
+        return JsonResponse(serializer.data)
+    
+    def put(self, serializer, invitation_id):
+        try:
+            invitation = Invitation.objects.get(pk=invitation_id, sender=self.request.user, is_accepted=False)
+        except Invitation.DoesNotExist:
+            return HttpResponse('NOT FOUND', status=404)
+        
+        serializer = SentInvitationSerializer(invitation, data=self.request.data)
+        
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data)
+        else:
+            return HttpResponse('BAD REQUEST', status=400)
+
+    def delete(self, serializer, invitation_id):
+        try:
+            invitation = Invitation.objects.get(pk=invitation_id, sender=self.request.user)
         except Invitation.DoesNotExist:
             return HttpResponse('NOT FOUND', status=404)
         
