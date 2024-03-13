@@ -35,11 +35,11 @@ class Create_Calendar_Serializer(serializers.Serializer):
         # Check if any of the pending_hosts or pending_guests are already guests or hosts in the calendar
         for host in pending_hosts:
             if host in instance.hosts.all():
-            raise serializers.ValidationError("User {} is already a host in the calendar.".format(host))
+                raise serializers.ValidationError("User {} is already a host in the calendar.".format(host))
         
         for guest in pending_guests:
             if guest in instance.guests.all():
-            raise serializers.ValidationError("User {} is already a guest in the calendar.".format(guest))
+                raise serializers.ValidationError("User {} is already a guest in the calendar.".format(guest))
         
         return data
 
