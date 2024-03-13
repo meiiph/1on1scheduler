@@ -22,26 +22,28 @@ class Calendar_Serializer(serializers.Serializer):
         return serializer.data
     
 class Create_Calendar_Serializer(serializers.Serializer):
-    name = serializers.CharField(max_length = 150)
-    description = serializers.CharField(max_length = 300, required=False)
+    name = serializers.CharField(max_length=150)
+    description = serializers.CharField(max_length=300, required=False)
     owner = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
     pending_hosts = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), many=True, required=False)
     pending_guests = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), required=False, many=True)
 
     def validate(self, data):
-        # Validate pending_hosts and pending_guests
-        pending_hosts = self.initial_data.get('pending_hosts', [])
-        pending_guests = self.initial_data.get('pending_guests', [])
+        owner = data.get('owner')
+        pending_hosts = data.get('pending_hosts', [])
+        pending_guests = data.get('pending_guests', [])
+
+        if not User.objects.filter(pk=owner.pk).exists():
+            raise serializers.ValidationError("Owner does not exist.")
         
-        # Check if any of the pending_hosts or pending_guests are already guests or hosts in the calendar
         for host in pending_hosts:
-            if host in instance.hosts.all():
-                raise serializers.ValidationError("User {} is already a host in the calendar.".format(host))
-        
+            if not User.objects.filter(pk=host.pk).exists():
+                raise serializers.ValidationError("Pending host with ID {} does not exist.".format(host.pk))
+            
         for guest in pending_guests:
-            if guest in instance.guests.all():
-                raise serializers.ValidationError("User {} is already a guest in the calendar.".format(guest))
-        
+            if not User.objects.filter(pk=guest.pk).exists():
+                raise serializers.ValidationError("Pending guest with ID {} does not exist.".format(guest.pk))
+
         return data
 
     def create(self, validated_data):
