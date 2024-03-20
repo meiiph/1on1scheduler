@@ -76,6 +76,13 @@ class SentInvitationListCreateView(generics.ListCreateAPIView):
     def post(self, request):
         serializer = SentInvitationSerializer(data=request.data)
         if serializer.is_valid():
+            try:
+                calendar = serializer.validated_data['calendar']
+                if calendar.owner != self.request.user:
+                    return HttpResponse('CALENDAR DOES NOT EXIST', status=400)
+            except Calendar.DoesNotExist:
+                return HttpResponse('CALENDAR DOES NOT EXIST', status=400)
+            
             serializer.save(sender=self.request.user)
             return JsonResponse(serializer.data)
         else:
@@ -104,6 +111,13 @@ class SentInvitationRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIV
         serializer = SentInvitationSerializer(invitation, data=self.request.data)
         
         if serializer.is_valid():
+            try:
+                calendar = serializer.validated_data['calendar']
+                if calendar.owner != self.request.user:
+                    return HttpResponse('CALENDAR DOES NOT EXIST', status=400)
+            except Calendar.DoesNotExist:
+                return HttpResponse('CALENDAR DOES NOT EXIST', status=400)
+            
             serializer.save()
             return JsonResponse(serializer.data)
         else:
