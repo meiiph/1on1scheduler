@@ -1,0 +1,80 @@
+.cal_container {
+    overflow-x: auto;
+  }
+  
+  .calendar {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .weekly-calendar {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th.time {
+    background-color: #f0f0f0;
+  }
+  
+  #daysoftheweek th {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  #empty_row {
+    height: 10px;
+  }
+  
+  #main_cal {
+    padding: 20px;
+  }
+  
+  #first_time {
+    border-top-left-radius: 5px;
+  }
+  .weekly-calendar {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .header {
+    display: flex;
+  }
+  
+  .day {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+  }
+  
+  .dates {
+    display: flex;
+  }
+  
+  .date {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 2px;
+  }
+  
