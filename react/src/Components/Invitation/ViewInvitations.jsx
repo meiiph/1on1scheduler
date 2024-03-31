@@ -4,15 +4,16 @@ import { useHistory } from 'react-router-dom'; // Import useHistory for navigati
 const ViewInvitations = () => {
   const [invitations, setInvitations] = useState([]);
   const [viewSentInvites, setViewSentInvites] = useState(true); // State to toggle between sent and received invites
+  const [calendarNames, setCalendarNames] = useState({}); // State to store calendar names
   const history = useHistory(); // Initialize useHistory hook for navigation
 
   useEffect(() => {
     const fetchInvitations = async () => {
       try {
-        const response = await fetch(`/api/invitations/all`, {
-        //   headers: {
-        //     'Authorization': `Bearer ${YOUR_AUTH_TOKEN}`,
-        //   },
+        const response = await fetch(`/api/invitations/all?type=${viewSentInvites ? 'sent' : 'received'}`, {
+          headers: {
+            'Authorization': `Bearer ${YOUR_AUTH_TOKEN}`, // Include authentication token if needed
+          },
         });
         if (response.ok) {
           const data = await response.json();
@@ -25,14 +26,42 @@ const ViewInvitations = () => {
       }
     };
     fetchInvitations();
-  }, [viewSentInvites]); // fetch invitations when viewSentInvites changes
+  }, [viewSentInvites]); // Fetch invitations when viewSentInvites changes
+
+  useEffect(() => {
+    const fetchCalendarNames = async () => {
+      const names = {};
+      await Promise.all(
+        invitations.map(async (invitation) => {
+          try {
+            const response = await fetch(`/api/calendars/${invitation.calendar_id}`, {
+            // headers: {
+            // 'Authorization': `Bearer ${YOUR_AUTH_TOKEN}`,
+            // },
+            });
+            if (response.ok) {
+              const data = await response.json();
+              names[invitation.calendar_id] = data.name;
+            } else {
+              throw new Error('Failed to fetch calendar name.');
+            }
+          } catch (error) {
+            console.error('Error fetching calendar name:', error);
+            names[invitation.calendar_id] = ''; // Set empty string if there's an error
+          }
+        })
+      );
+      setCalendarNames(names);
+    };
+    fetchCalendarNames();
+  }, [invitations]); // Fetch calendar names when invitations change
 
   const handleRespond = (invitationId) => {
-    history.push(`${invitationId}/respond`);
+    history.push(`${invitationId}/respond`); // Navigate to the respond invitation component
   };
 
   const handleDelete = (invitationId) => {
-    history.push(`${invitationId}/delete`);
+    history.push(`${invitationId}/delete`); // Navigate to the delete invitation component
   };
 
   return (
@@ -50,8 +79,7 @@ const ViewInvitations = () => {
               {invitations.map(invitation => (
                 <li key={invitation.id}>
                   Receiver: {invitation.receiver_username}
-                  Calendar ID: {invitation.calendar_id}
-                  Status: Pending
+                  Calendar: {calendarNames[invitation.calendar_id]} - Status: Pending
                   <button onClick={() => handleDelete(invitation.id)}>Delete</button>
                 </li>
               ))}
@@ -64,7 +92,7 @@ const ViewInvitations = () => {
               {invitations.map(invitation => (
                 <li key={invitation.id}>
                   Sender: {invitation.sender_username}
-                  Calendar ID: {invitation.calendar_id}
+                  Calendar: {calendarNames[invitation.calendar_id]}
                   <button onClick={() => handleRespond(invitation.id)}>Respond</button>
                   <button onClick={() => handleDelete(invitation.id)}>Delete</button>
                 </li>
