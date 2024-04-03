@@ -19,8 +19,8 @@ function Calendar() {
             <div className="view">
                 {/* Render calendar content based on the selected view */}
                 {view === 'weekly' && <WeeklyCalendar/>}
-                {view === 'monthly' && <p>Monthly Calendar</p>}
-                {view === 'daily' && <p>Daily Calendar</p>}
+                {view === 'monthly' && <MonthlyCalendar/>}
+                {view === 'daily' && <DailyCalendar/>}
             </div>
         </div>
     );
