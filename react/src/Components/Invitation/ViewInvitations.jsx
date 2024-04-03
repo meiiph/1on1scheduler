@@ -10,10 +10,10 @@ const ViewInvitations = () => {
   useEffect(() => {
     const fetchInvitations = async () => {
       try {
-        const response = await fetch(`/api/invitations/all?type=${viewSentInvites ? 'sent' : 'received'}`, {
-          headers: {
-            'Authorization': `Bearer ${YOUR_AUTH_TOKEN}`, // Include authentication token if needed
-          },
+        const response = await fetch(`/api/invitations/all'}`, {
+          // headers: {
+          //   'Authorization': `Bearer ${YOUR_AUTH_TOKEN}`,
+          // },
         });
         if (response.ok) {
           const data = await response.json();
@@ -64,6 +64,10 @@ const ViewInvitations = () => {
     history.push(`${invitationId}/delete`); // Navigate to the delete invitation component
   };
 
+  const sendReminderEmail = (recipientEmail) => {
+    window.location.href = `mailto:${recipientEmail}?subject=Meeting%20Reminder&body=Hi%20there,%20just%20a%20reminder%20that%20you%20have%20not%20accepted%20the%20invitation%20I%20sent%20for%20our%20meeting.%20Please%20log%20into%20your%20account%20and%20accept%20or%20decline%20the%20invitation%20as%20soon%20as%20possible.%20Thanks!`;
+  };
+  
   return (
     <div>
       <h2>View Invitations</h2>
@@ -78,8 +82,10 @@ const ViewInvitations = () => {
             <ul>
               {invitations.map(invitation => (
                 <li key={invitation.id}>
-                  Receiver: {invitation.receiver_username}
-                  Calendar: {calendarNames[invitation.calendar_id]} - Status: Pending
+                  Receiver: {invitation.receiver.username}
+                  Calendar: {calendarNames[invitation.calendar_id]}
+                  Status: Pending
+                  <button onClick={() => sendReminderEmail(invitation.receiver.email)}>Send Reminder Email</button>
                   <button onClick={() => handleDelete(invitation.id)}>Delete</button>
                 </li>
               ))}
