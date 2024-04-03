@@ -98,10 +98,5 @@ class Calendar_View(APIView):
 
         calendar.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-<<<<<<< HEAD
-=======
-
-        
->>>>>>> c37d376700ae3ebf88447e432ccdf2865116f77b
 
  
