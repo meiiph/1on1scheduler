@@ -1,0 +1,34 @@
+/* DailyCalendar.css */
+.daily-calendar {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .daily-calendar h2 {
+    margin-top: 0;
+  }
+  
+  .time-slots {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .time-slot {
+    display: flex;
+  }
+  
+  .time {
+    width: 80px;
+    padding-right: 10px;
+    text-align: right;
+  }
+  
+  .event {
+    flex-grow: 1;
+    padding-left: 10px;
+    border-left: 2px solid #ccc;
+  }
+  
