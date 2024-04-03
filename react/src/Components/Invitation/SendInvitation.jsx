@@ -3,21 +3,38 @@ import React, { useState, useEffect } from 'react';
 const SendInvitation = ({}) => {
   const [formData, setFormData] = useState({ username: '', type: '', calendarId: '' });
   const [calendars, setCalendars] = useState([]);
-  
+
   useEffect(() => {
     const fetchCalendars = async () => {
       try {
-        const response = await fetch(`/api/calendars/all`, {
-        // headers: {
-        // 'Authorization': `Bearer ${YOUR_AUTH_TOKEN}`,
-        // },
+        const ownResponse = await fetch(`/api/calendars/all`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            // 'Authorization': `Bearer ${YOUR_AUTH_TOKEN}`,
+          },
+          body: JSON.stringify({ type: 'own' }), // Set the type as 'own'
         });
-        if (response.ok) {
-          const data = await response.json();
-          const ownedCalendars = data.filter(calendar => calendar.owner === YOUR_USER_ID); // idk how to get the user id yet
-          setCalendars(ownedCalendars);
-          if (ownedCalendars.length > 0) {
-            setFormData({ ...formData, calendarId: ownedCalendars[0].id });
+
+        const hostResponse = await fetch(`/api/calendars/all`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            // 'Authorization': `Bearer ${YOUR_AUTH_TOKEN}`,
+          },
+          body: JSON.stringify({ type: 'host' }), // Set the type as 'host'
+        });
+
+        if (ownResponse.ok && hostResponse.ok) {
+          const ownData = await ownResponse.json();
+          const hostData = await hostResponse.json();
+
+          // Combine calendars from both responses
+          const combinedCalendars = [...ownData, ...hostData];
+
+          setCalendars(combinedCalendars);
+          if (combinedCalendars.length > 0) {
+            setFormData({ ...formData, calendarId: combinedCalendars[0].id });
           }
         } else {
           throw new Error('Failed to fetch calendars.');
@@ -41,7 +58,7 @@ const SendInvitation = ({}) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-        // 'Authorization': `Bearer ${YOUR_AUTH_TOKEN}`,
+          // 'Authorization': `Bearer ${YOUR_AUTH_TOKEN}`,
         },
         body: JSON.stringify(formData),
       });
