@@ -1,0 +1,57 @@
+.calendar-container {
+    overflow: auto;
+    height: 400px; /* Adjust height as needed */
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th,
+.calendar td {
+    border: 1px solid #0056b3; /* Border color */
+    padding: 12px;
+    text-align: center;
+    height: 3rem;
+}
+
+.calendar th {
+    background-color: white; /* Header background color */
+    color: #333; /* Header text color */
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+
+.time {
+    font-size: 14px; /* Time font size */
+    color: #0056b3; /* Time text color */
+    position: relative; /* Position absolute */
+    top: -2.5rem; /* Adjust to align with the top border of the td */
+    left: 0; /* Ensure left alignment */
+    right: 0; /* Ensure right alignment */
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+    border: 0;
+    padding-top: 5px;
+}
+
+tr th:first-child,
+tr td:first-child {
+    border-left: 0;
+    border-bottom: 0;
+    border-top: 0;
+    background-color: white;
+}
+
+.calendar th::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #0056b3; /* Color of the pseudo-element border */
+}

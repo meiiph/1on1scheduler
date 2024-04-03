@@ -1,0 +1,122 @@
+# should create a new user
+POST http://127.0.0.1:8000/auth/signup/
+Content-Type: application/json
+
+{
+    "email": "jenna@example.com",
+    "first_name": "Jenna",
+    "last_name": "Smith",
+    "password1": "3030JerseyShore",
+    "password2": "3030JerseyShore",
+    "username": "jenna"
+}
+
+###
+
+# should create a new user
+POST http://127.0.0.1:8000/auth/signup/
+Content-Type: application/json
+
+{
+    "email": "michael@example.com",
+    "first_name": "Michael",
+    "last_name": "Smith",
+    "password1": "5050Brooklyn",
+    "password2": "5050Brooklyn",
+    "username": "mike"
+}
+
+###
+
+POST http://127.0.0.1:8000/auth/signup/
+Content-Type: application/json
+
+{
+    "email": "jasey@example.com",
+    "first_name": "Jasey",
+    "last_name": "Smith",
+    "password1": "9090FordPark",
+    "password2": "9090FordPark",
+    "username": "jaseythebot"
+}
+
+###
+
+POST http://127.0.0.1:8000/auth/login/
+Content-Type: application/json
+
+{
+    "username": "jenna",
+    "password": "3030JerseyShore"
+
+}
+
+###
+
+POST http://127.0.0.1:8000/calendars/calendars/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwOTYzMzE3LCJpYXQiOjE3MTA5NjMwMTcsImp0aSI6IjViMGVlNzkzNDZlZDQxYWM4ZjVmNjk5NWYxYzE3YTFjIiwidXNlcl9pZCI6MX0.0NIPoX8yOHtVHeHQd5OyLx4LgDShivXxyN4H9A7qYfw
+
+{
+    "name": "mycal",
+    "description": "this is a test calendar",
+    "pending_hosts": ["mike"],
+    "pending_guests": ["jaseythebot"]
+}
+
+###
+
+POST http://127.0.0.1:8000/calendars/calendars/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwOTYzMzE3LCJpYXQiOjE3MTA5NjMwMTcsImp0aSI6IjViMGVlNzkzNDZlZDQxYWM4ZjVmNjk5NWYxYzE3YTFjIiwidXNlcl9pZCI6MX0.0NIPoX8yOHtVHeHQd5OyLx4LgDShivXxyN4H9A7qYfw
+
+{
+    "name": "schoolcal",
+    "description": "this is my school calendar"
+}
+
+###
+
+GET http://127.0.0.1:8000/calendars/calendars/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwOTYzMTg2LCJpYXQiOjE3MTA5NjI4ODYsImp0aSI6IjQwNTA3YWI2NTYzYzRiYzJiOWE1OGE4ZjkyMTNmYjZiIiwidXNlcl9pZCI6MX0.OOLWsVLJoikQj3mMBkH8e3ge0s-Gsm2bhxaZJD-n3X8
+###
+
+POST http://127.0.0.1:8000/auth/logout/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwOTYzMzE3LCJpYXQiOjE3MTA5NjMwMTcsImp0aSI6IjViMGVlNzkzNDZlZDQxYWM4ZjVmNjk5NWYxYzE3YTFjIiwidXNlcl9pZCI6MX0.0NIPoX8yOHtVHeHQd5OyLx4LgDShivXxyN4H9A7qYfw
+
+{   
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxMTA0OTQxNywiaWF0IjoxNzEwOTYzMDE3LCJqdGkiOiJlNzcyNDIzMGNhYTE0NzhlYTUyODVkZTk1MjQzODNiOCIsInVzZXJfaWQiOjF9.OImqdtLXfVEdokTqduUVhiHilJgx00kr7DXLXu09avI"
+
+}
+###
+
+POST http://127.0.0.1:8000/auth/login/
+Content-Type: application/json
+
+{
+    "username": "mike",
+    "password": "5050Brooklyn"
+
+}
+
+###
+
+GET http://127.0.0.1:8000/calendars/calendars/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwOTYzNDEyLCJpYXQiOjE3MTA5NjMxMTIsImp0aSI6IjJkYzIxYzllNGI5NDQyN2Q5ZThiOTQ3OGNiZDFkMDQ3IiwidXNlcl9pZCI6Mn0.fxkuImijTHUf8bqHAgiRYx32fTZhHzhwLaD_rhY_Aq0
+
+###
+
+POST http://127.0.0.1:8000/auth/logout/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwOTYzMzE3LCJpYXQiOjE3MTA5NjMwMTcsImp0aSI6IjViMGVlNzkzNDZlZDQxYWM4ZjVmNjk5NWYxYzE3YTFjIiwidXNlcl9pZCI6MX0.0NIPoX8yOHtVHeHQd5OyLx4LgDShivXxyN4H9A7qYfw
+
+{   
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxMTA0OTUxMiwiaWF0IjoxNzEwOTYzMTEyLCJqdGkiOiI0M2IxMDQ4YmRkYTY0OTY5OTQzNTBlMGEzN2I4NWZlYSIsInVzZXJfaWQiOjJ9.PVNWn8yA10_8mk_Hykwg0ue_w2AmURRixByBLtppzts"
+
+}
+
+
+###
