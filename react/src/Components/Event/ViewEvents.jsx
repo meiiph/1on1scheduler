@@ -6,7 +6,7 @@ const ViewEvents = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('/calendars/my_events/');
+        const response = await fetch('/api/events/list/');
         if (response.ok) {
           const data = await response.json();
           setEvents(data);
@@ -25,7 +25,7 @@ const ViewEvents = () => {
       <h2>My Events</h2>
       <ul>
         {events.map(event => (
-          <li key={event.id}>{event.name} - {event.start_time}</li>
+          <li key={event.id}>{event.id}</li>
         ))}
       </ul>
     </div>
