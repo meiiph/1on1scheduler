@@ -1,0 +1,33 @@
+import React, { useState } from 'react';
+
+const AddAttendee = ({ eventId }) => {
+  const [userId, setUserId] = useState('');
+
+  const handleAddAttendee = async () => {
+    try {
+      const response = await fetch(`/calendars/add_attendee/${eventId}/${userId}/`, {
+        method: 'PATCH',
+        // Add authorization token if needed
+      });
+      if (response.ok) {
+        alert('Attendee added successfully.');
+        // Refresh event details or update state as needed
+      } else {
+        throw new Error('Failed to add attendee.');
+      }
+    } catch (error) {
+      console.error('Error adding attendee:', error);
+      alert('Failed to add attendee.');
+    }
+  };
+
+  return (
+    <div>
+      <h2>Add Attendee</h2>
+      <input type="text" value={userId} onChange={(e) => setUserId(e.target.value)} placeholder="User ID" />
+      <button onClick={handleAddAttendee}>Add Attendee</button>
+    </div>
+  );
+};
+
+export default AddAttendee;
