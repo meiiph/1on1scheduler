@@ -7,7 +7,10 @@ const AddAttendee = ({ eventId }) => {
     try {
       const response = await fetch(`/calendars/add_attendee/${eventId}/${userId}/`, {
         method: 'PATCH',
-        // Add authorization token if needed
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
       });
       if (response.ok) {
         alert('Attendee added successfully.');
