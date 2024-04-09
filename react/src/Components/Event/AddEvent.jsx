@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { TOKEN } from "../../constants/index";
 
 const AddEvent = () => {
   const [eventData, setEventData] = useState({
@@ -13,7 +14,7 @@ const AddEvent = () => {
       const response = await fetch('/calendars/create_event/', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${token}`,
+          'Authorization': `Bearer ` + TOKEN,
           'Content-Type': 'application/json',
           
         },

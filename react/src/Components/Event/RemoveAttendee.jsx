@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { TOKEN } from "../../constants/index";
 
 const RemoveAttendee = ({ eventId }) => {
   const [userId, setUserId] = useState('');
@@ -8,7 +9,7 @@ const RemoveAttendee = ({ eventId }) => {
       const response = await fetch(`/calendars/remove_attendee/${eventId}/${userId}/`, {
         method: 'PATCH',
         headers: {
-          'Authorization': `Bearer ${token}`,
+          'Authorization': `Bearer ` + TOKEN,
           'Content-Type': 'application/json'
         }
       });

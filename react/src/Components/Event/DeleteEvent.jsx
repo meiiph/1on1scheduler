@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { TOKEN } from "../../constants/index";
 
 const DeleteEvent = ({ eventId }) => {
   const history = useHistory();
@@ -9,7 +10,7 @@ const DeleteEvent = ({ eventId }) => {
       const response = await fetch(`/calendars/cancel_event/${eventId}/`, {
         method: 'PATCH',
         headers: {
-            'Authorization': `Bearer ${token}`,
+            'Authorization': `Bearer ` + TOKEN,
             'Content-Type': 'application/json'
           }
       });
