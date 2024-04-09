@@ -1,0 +1,67 @@
+# test invitational functionality. 
+POST http://127.0.0.1:8000/accounts/signup/
+Content-Type: application/json
+
+{
+    "username": "jason",
+    "password": "2020Brooklyn",
+    "email": "jason.liu@gmail.com",
+    "first_name": "jason",
+    "last_name": "liu"
+}
+###
+
+POST http://127.0.0.1:8000/accounts/login/ 
+Content-Type: application/json
+
+{
+    "username": "jason",
+    "password": "2020Brooklyn"
+}
+
+###
+
+POST http://127.0.0.1:8000/calendars/create 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzMyOTg4LCJpYXQiOjE3MTE3MzI2ODgsImp0aSI6IjBjZjg3MjViZmY3ODQxYWU4YWJmMTlkMmM0ZTJhODJiIiwidXNlcl9pZCI6M30.xpvMR9n-n-RTdwVKPqV2O9varnIbDSTZn2cd_euXRqk
+
+{
+    "name": "testcal",
+    "description": "a cal for testing reasons"
+}
+
+###
+
+POST http://127.0.0.1:8000/accounts/signup/
+Content-Type: application/json
+
+{
+    "username": "pineconetree",
+    "password": "3030York",
+    "email": "annie.liu@gmail.com",
+    "first_name": "annie",
+    "last_name": "liu"
+}
+
+###
+
+POST http://127.0.0.1:8000/invitations/4/send
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzMyOTg4LCJpYXQiOjE3MTE3MzI2ODgsImp0aSI6IjBjZjg3MjViZmY3ODQxYWU4YWJmMTlkMmM0ZTJhODJiIiwidXNlcl9pZCI6M30.xpvMR9n-n-RTdwVKPqV2O9varnIbDSTZn2cd_euXRqk
+
+{
+    "username": "pineconetree",
+    "type": "guest"
+}
+
+###
+
+GET http://127.0.0.1:8000/invitations/all 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzMzMjk5LCJpYXQiOjE3MTE3MzI5OTksImp0aSI6IjdjNTc5OWU1NGQyNjQ4NzU5NDY0MTBjNzNhNmJmNGZhIiwidXNlcl9pZCI6M30.wjHY9YvcOARlGiHvMFqt0vr6sdB4tldszEI92QYoIzU
+
+{
+    "type": "sent"
+}
+
+### 
