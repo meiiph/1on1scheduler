@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import { Component, Fragment } from "react";
 import { Modal, ModalHeader, ModalBody, Button } from "reactstrap";
 import ContactForm from "./ContactForm";
 
