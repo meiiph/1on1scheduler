@@ -29,6 +29,8 @@ createContact = e => {
   axios.post(API_URL + "/contacts/", JSON.stringify(this.state), {headers: headers}).then(() => {
     this.props.resetState();
     this.props.toggle();
+  }).catch(function () {
+    alert('Not all fields filled, username does not exist, or user already in your contacts.');
   });
 }
 
