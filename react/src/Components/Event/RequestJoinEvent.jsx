@@ -1,4 +1,5 @@
 import React from 'react';
+import { TOKEN } from "../../constants/index";
 
 const RequestJoin = ({ eventId }) => {
   const handleRequestJoin = async () => {
@@ -6,7 +7,7 @@ const RequestJoin = ({ eventId }) => {
       const response = await fetch(`/calendars/request_join/${eventId}/`, {
         method: 'PATCH',
         headers: {
-            'Authorization': `Bearer ${token}`,
+            'Authorization': `Bearer ` + TOKEN,
             'Content-Type': 'application/json'
           }
       });

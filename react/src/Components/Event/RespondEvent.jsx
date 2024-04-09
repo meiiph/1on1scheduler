@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { TOKEN } from "../../constants/index";
 
 const RespondEvent = ({ eventId }) => {
   const [status, setStatus] = useState('');
@@ -9,7 +10,7 @@ const RespondEvent = ({ eventId }) => {
       const response = await fetch(`/api/events/${eventId}/respond/`, {
         method: 'PATCH',
         headers: {
-            'Authorization': `Bearer ${token}`,
+            'Authorization': `Bearer ` + TOKEN,
             'Content-Type': 'application/json'
           },
         body: JSON.stringify({
