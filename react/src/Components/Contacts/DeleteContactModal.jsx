@@ -1,5 +1,6 @@
 import { Component, Fragment } from "react";
 import axios from "axios";
+import { API_URL, TOKEN } from "../../constants/index";
 import { Modal, ModalHeader, ModalFooter, Button } from "reactstrap";
 
 class DeleteContactModal extends Component {
@@ -13,8 +14,9 @@ class DeleteContactModal extends Component {
     }));
   };
 
-  deleteContact = pk => {
-    axios.delete("http://localhost:8000/contacts/" + pk).then(() => {
+  deleteContact = id => {
+    const headers = {'Authorization': `Bearer ` + TOKEN};
+    axios.delete(API_URL + "/contacts/" + id, { headers }).then(() => {
       this.props.resetState();
       this.toggle();
     });
@@ -38,7 +40,7 @@ class DeleteContactModal extends Component {
             <Button
               type="button"
               color="primary"
-              onClick={() => this.deleteContact(this.props.pk)}
+              onClick={() => this.deleteContact(this.props.id)}
             >
               Yes
             </Button>

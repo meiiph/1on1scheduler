@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import "./Auth.css";
 
 function Auth() {
     const [loginPage, setLoginPage] = useState(true);
     return (
-    <div className="container">
+    <div className="container auth-container">
       <div className="header">{loginPage ? "Login" : "Sign Up"}</div>
       <div className="fields">
         {loginPage ? (

@@ -1,24 +1,30 @@
-// import Auth from "./Components/Auth/Auth"
-// import Nav from "./Components/Nav/Nav"
-// import Calendar from "./Components/Calendar/Calendar";
-// import React from "react";
-import { Component } from "react";
+import { Component, Fragment } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ContactsHome from "./Components/Contacts/ContactsHome";
 import ViewEvents from "./Components/Event/ViewEvents";
 import AddEvent from "./Components/Event/AddEvent"
+import Auth from "./Components/Auth/Auth"
+import NavBar from "./Components/Nav/Nav"
+// import DeleteContactModal from "./Components/Contacts/DeleteContactModal";
+// import Calendar from "./Components/Calendar/Calendar";
+// import React from "react";
 
 class App extends Component {
   render () {
     return(
-      <BrowserRouter>
-        <Routes>
-          <Route path={'/'}/>
-          <Route path={'/contacts/'} element={<ContactsHome/>}/>
-          <Route path={'/events/'} element={<ViewEvents/>}/>
-          <Route path={'/add/'} element={<AddEvent/>}/>
-        </Routes>
-      </BrowserRouter>
+      <Fragment>
+        <BrowserRouter>
+          <NavBar/>
+          <Routes>
+            <Route path={'/'} element={<Auth/>}/>
+            <Route path={'/contacts/'} element={<ContactsHome/>}/>
+            {/* <Route path={'/contacts/:contact_id'} element={<DeleteContactModal/>}/> */}
+            {/* <Route path={'/calendars/'} element={<Calendar/>}/> */}
+            <Route path={'/events/'} element={<ViewEvents/>}/>
+            <Route path={'/add/'} element={<AddEvent/>}/>
+          </Routes>
+        </BrowserRouter>
+      </Fragment>
     );
   }
 }
