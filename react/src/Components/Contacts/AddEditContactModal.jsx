@@ -27,9 +27,7 @@ class AddEditContactModal extends Component {
           className="float-right"
           onClick={this.toggle}
           style={{ minWidth: "200px" }}
-        >
-          Add Contact
-        </Button>
+        >Add Contact</Button>
       );
     }
 
