@@ -5,6 +5,7 @@ from .serializers import InvitationSerializer
 from .models import Invitation
 from django.contrib.auth.models import User
 from calendars.models import Calendar
+from django.core.mail import send_mail
 
 @api_view(['POST'])
 def send_invitation(request, calendar_id):
@@ -21,6 +22,8 @@ def send_invitation(request, calendar_id):
     the type of invitation is required and its either guest, host, or super_host. 
     """
     receiver_username = request.data.get('username')
+    receiver = get_object_or_404(User, username=receiver_username)
+    calendar = get_object_or_404(Calendar, id=calendar_id)
 
     data = {
         'sender': request.user.id,
@@ -32,8 +35,13 @@ def send_invitation(request, calendar_id):
     serializer = InvitationSerializer(data=data)
     if serializer.is_valid():
         serializer.save()
-        return Response({'message': f'invitation sent successfully to {receiver_username}'}, status=201)
-    
+
+        subject = 'You have received an invitation'
+        message = f'You have received an invitation from {request.user.username} for calendar {calendar.name}. Invitation Type: {request.data.get('type')}'
+        receiver_email = receiver.email
+        send_mail(subject, message, 'norelpy@example.com', [receiver_email])
+
+        return Response({'message': f'Invitation sent successfully to {receiver_username}'}, status=201)
     else:
         return Response(serializer.errors, status=400)
     
@@ -153,3 +161,4 @@ def delete_invitation(request, invitation_id):
         return Response({'message': 'invitation deleted successfully'}, status=204)
     else:
         return Response({'error': 'you do not have permission to delete this invitation'}, status=403)
+
