@@ -7,7 +7,7 @@ const RespondInvitation = () => {
 
   const handleAccept = async () => {
     try {
-      const response = await fetch(`/api/invitations/${invitationId}/respond`, {
+      const response = await fetch(`/OneOnOne/invitations/${invitationId}/respond`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ const RespondInvitation = () => {
 
   const handleDecline = async () => {
     try {
-      const response = await fetch(`/api/invitations/${invitationId}/respond`, {
+      const response = await fetch(`/OneOnOne/invitations/${invitationId}/respond`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

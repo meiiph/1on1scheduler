@@ -10,7 +10,7 @@ const ViewInvitations = () => {
   useEffect(() => {
     const fetchInvitations = async () => {
       try {
-        const response = await fetch(`/scheduler/invitations/all'}`, {
+        const response = await fetch(`/OneOnOne/invitations/all'}`, {
           // headers: {
           //   'Authorization': `Bearer ${YOUR_AUTH_TOKEN}`,
           // },
@@ -34,7 +34,7 @@ const ViewInvitations = () => {
       await Promise.all(
         invitations.map(async (invitation) => {
           try {
-            const response = await fetch(`/scheduler/calendars/${invitation.calendar_id}`, {
+            const response = await fetch(`/OneOnOne/calendars/${invitation.calendar_id}`, {
             // headers: {
             // 'Authorization': `Bearer ${YOUR_AUTH_TOKEN}`,
             // },

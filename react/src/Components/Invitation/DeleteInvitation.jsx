@@ -8,7 +8,7 @@ const DeleteInvitation = () => {
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`/api/invitations/${invitationId}/delete`, {
+      const response = await fetch(`/OneOnOne/invitations/${invitationId}/delete`, {
         method: 'DELETE',
         // headers: {
         //   'Authorization': `Bearer ${YOUR_AUTH_TOKEN}`,
