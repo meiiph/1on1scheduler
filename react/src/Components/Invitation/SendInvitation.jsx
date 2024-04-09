@@ -54,24 +54,31 @@ const SendInvitation = ({}) => {
   const handleSubmit = async event => {
     event.preventDefault();
     try {
-      const response = await fetch(`/api/invitations/${formData.calendarId}/send`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          // 'Authorization': `Bearer ${YOUR_AUTH_TOKEN}`,
-        },
-        body: JSON.stringify(formData),
+      // Iterate over selected contacts
+      selectedContacts.forEach(contact => {
+        // Construct the email body with the unique link
+        const emailBody = `Dear ${contact.username},\n\nYou have been invited to schedule a regular meeting with ${loggedInUser}. Please click on the following link to specify your schedule and preferences:\n\n${generateUniqueLink(contact.id)}\n\nBest regards,\n${loggedInUser}`;
+        
+        // Generate mailto link
+        const mailtoLink = `mailto:${contact.email}?subject=Invitation%20to%20Schedule%20a%20Meeting&body=${encodeURIComponent(emailBody)}`;
+  
+        // Open default email app with prefilled email
+        window.open(mailtoLink);
       });
-      if (response.ok) {
-        alert(`Invitation sent successfully to ${formData.username}`);
-        setFormData({ username: '', type: '', calendarId: '' }); // Reset form data after successful submission
-      } else {
-        throw new Error('Failed to send invitation.');
-      }
+  
+      // Reset form data after successful submission
+      setFormData({ username: '', deadline: '' });
+      setSelectedContacts([]);
+      alert('Invitations sent successfully');
     } catch (error) {
-      console.error('Error sending invitation:', error);
-      alert('Failed to send invitation.');
+      console.error('Error sending invitations:', error);
+      alert('Failed to send invitations');
     }
+  };
+
+  const generateUniqueLink = (contactId) => {
+    // Generate a unique link using the contact ID
+    return `https://example.com/schedule-meeting/${contactId}`; // TODO: update with correct URL
   };
 
   return (
