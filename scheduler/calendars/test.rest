@@ -1,0 +1,85 @@
+
+POST http://127.0.0.1:8000/accounts/signup/
+Content-Type: application/json
+
+{
+    "username": "john_doe",
+    "password": "my_secure_password",
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john.doe@example.com"
+}
+
+###
+
+POST http://127.0.0.1:8000/accounts/login/
+Content-Type: application/json
+
+{
+    "username": "john_doe",
+    "password": "my_secure_password"
+}
+
+###
+
+POST http://127.0.0.1:8000/calendars/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzI3NjcxLCJpYXQiOjE3MTE3MjczNzEsImp0aSI6ImZhYTMwMjhjYjgzZTQ2ZGU4YWM3OTY5Yzk4NDJiNmMzIiwidXNlcl9pZCI6MX0.QjpH9aq5QCL76hFMl0KDfiumVuBHUBiPUIqTViZ_C44
+
+{
+    "name": "mycal"
+}
+
+###
+
+GET http://127.0.0.1:8000/calendars/all
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzI3ODMwLCJpYXQiOjE3MTE3Mjc1MzAsImp0aSI6IjI3NmZiNzIzZDI2ZTQzYzRhNGEyODQ2MWVhM2M3YzlkIiwidXNlcl9pZCI6Mn0.YkOaCyCm_iVgZc3Mq134oFYs9zVHqTfvpZqBAJfvfH0
+
+{
+
+}
+
+###
+
+GET http://127.0.0.1:8000/calendars/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyNjI4ODM2LCJpYXQiOjE3MTI2Mjg1MzYsImp0aSI6IjRlMGE1YWI2ZjY2OTRkM2M5ZjA0ZmJhNGQwODM0ODIyIiwidXNlcl9pZCI6NH0.6gvsUHPQg-X665QyK5LYDQrn7OAc2Zyp9CnDMbtkB28
+
+{
+
+}
+###
+
+DELETE http://127.0.0.1:8000/calendars/3/delete
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzI3ODMwLCJpYXQiOjE3MTE3Mjc1MzAsImp0aSI6IjI3NmZiNzIzZDI2ZTQzYzRhNGEyODQ2MWVhM2M3YzlkIiwidXNlcl9pZCI6Mn0.YkOaCyCm_iVgZc3Mq134oFYs9zVHqTfvpZqBAJfvfH0
+
+{
+
+}
+
+###
+
+POST http://127.0.0.1:8000/accounts/signup/
+Content-Type: application/json
+
+{
+    "username": "annie",
+    "password": "my_annie_password",
+    "first_name": "Annie",
+    "last_name": "Doe",
+    "email": "annie.doe@example.com"
+}
+
+###
+
+POST http://127.0.0.1:8000/accounts/login/
+Content-Type: application/json
+
+{
+    "username": "annie",
+    "password": "my_annie_password"
+}
+
+###

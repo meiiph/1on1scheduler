@@ -1,0 +1,95 @@
+# test invitational functionality. 
+POST http://127.0.0.1:8000/accounts/signup/
+Content-Type: application/json
+
+{
+    "username": "jason",
+    "password": "2020Brooklyn",
+    "email": "jason.liu@gmail.com",
+    "first_name": "jason",
+    "last_name": "liu"
+}
+###
+
+POST http://127.0.0.1:8000/accounts/login/ 
+Content-Type: application/json
+
+{
+    "username": "jason",
+    "password": "2020Brooklyn"
+}
+
+###
+
+POST http://127.0.0.1:8000/calendars/create 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyNjI4Mzk1LCJpYXQiOjE3MTI2MjgwOTUsImp0aSI6IjY3ODAxOTEyNDcwZjRmYzA4NTI3YjkxNTE0NWViZjVlIiwidXNlcl9pZCI6M30.z2JtW2vORKPvuzvpepvzlJbR-LY4gGOxqelhoPCsAN0
+
+{
+    "name": "testcal",
+    "description": "a cal for testing reasons"
+}
+
+###
+
+POST http://127.0.0.1:8000/accounts/signup/
+Content-Type: application/json
+
+{
+    "username": "pineconetree",
+    "password": "3030York",
+    "email": "annie.liu@gmail.com",
+    "first_name": "annie",
+    "last_name": "liu"
+}
+
+###
+POST http://127.0.0.1:8000/accounts/login/
+Content-Type: application/json
+
+{
+    "username": "pineconetree",
+    "password": "3030York"
+}
+
+###
+
+POST http://127.0.0.1:8000/invitations/2/send
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyNjI4Mzk1LCJpYXQiOjE3MTI2MjgwOTUsImp0aSI6IjY3ODAxOTEyNDcwZjRmYzA4NTI3YjkxNTE0NWViZjVlIiwidXNlcl9pZCI6M30.z2JtW2vORKPvuzvpepvzlJbR-LY4gGOxqelhoPCsAN0
+
+{
+    "username": "pineconetree",
+    "type": "guest"
+}
+
+###
+
+GET http://127.0.0.1:8000/invitations/all 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyNjI4Mzk1LCJpYXQiOjE3MTI2MjgwOTUsImp0aSI6IjY3ODAxOTEyNDcwZjRmYzA4NTI3YjkxNTE0NWViZjVlIiwidXNlcl9pZCI6M30.z2JtW2vORKPvuzvpepvzlJbR-LY4gGOxqelhoPCsAN0
+
+{
+    "type": "sent"
+}
+
+### 
+
+GET http://127.0.0.1:8000/invitations/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyNjI4Mzk1LCJpYXQiOjE3MTI2MjgwOTUsImp0aSI6IjY3ODAxOTEyNDcwZjRmYzA4NTI3YjkxNTE0NWViZjVlIiwidXNlcl9pZCI6M30.z2JtW2vORKPvuzvpepvzlJbR-LY4gGOxqelhoPCsAN0
+
+{
+
+}
+
+###
+
+DELETE http://127.0.0.1:8000/invitations/1/respond
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyNjI4ODM2LCJpYXQiOjE3MTI2Mjg1MzYsImp0aSI6IjRlMGE1YWI2ZjY2OTRkM2M5ZjA0ZmJhNGQwODM0ODIyIiwidXNlcl9pZCI6NH0.6gvsUHPQg-X665QyK5LYDQrn7OAc2Zyp9CnDMbtkB28
+
+{
+    "status": "accept"
+}
+
