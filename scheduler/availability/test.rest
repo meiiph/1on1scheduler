@@ -1,0 +1,62 @@
+POST http://127.0.0.1:8000/accounts/signup/
+Content-Type: application/json
+
+{
+    "username": "lucy_gray",
+    "password": "mockingbird", 
+    "email": "lucy@gmail.com",
+    "first_name": "Lucy",
+    "last_name": "Gray"
+}
+
+###
+
+POST http://127.0.0.1:8000/accounts/login/
+Content-Type: application/json
+
+{
+    "username": "lucy_gray",
+    "password": "mockingbird"
+}
+
+###
+
+POST http://127.0.0.1:8000/calendars/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExODE0NjIwLCJpYXQiOjE3MTE4MTQzMjAsImp0aSI6Ijg2ODk3ZTQyYmZmOTQ4YTc5ODI5ZTNmZmE4MjdiZTk2IiwidXNlcl9pZCI6MX0.L6P1y_60oL8MTlYaMBufBQ491gLEK7iQQ3Uv1n5hoyE
+
+{
+    "name": "my_cal"
+}
+###
+
+POST http://127.0.0.1:8000/availability/create/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExODE0NjU1LCJpYXQiOjE3MTE4MTQzNTUsImp0aSI6ImJmNGZjODAxYzc4MjQ0YTJiOWFhMmJmYmM0NTU3ZmUzIiwidXNlcl9pZCI6MX0.blVRyW-8A-12CnXHtQNZralM2J5MAL_WGpU_thWAmC4
+
+{
+    "start": "2024-03-30T16:54:12.619344Z",
+    "end": "2024-03-30T18:54:12.619344Z"
+}
+
+###
+
+GET http://127.0.0.1:8000/availability/view/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExODE0NjU1LCJpYXQiOjE3MTE4MTQzNTUsImp0aSI6ImJmNGZjODAxYzc4MjQ0YTJiOWFhMmJmYmM0NTU3ZmUzIiwidXNlcl9pZCI6MX0.blVRyW-8A-12CnXHtQNZralM2J5MAL_WGpU_thWAmC4
+
+{
+
+}
+
+###
+DELETE http://127.0.0.1:8000/availability/remove/1
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExODE0NjU1LCJpYXQiOjE3MTE4MTQzNTUsImp0aSI6ImJmNGZjODAxYzc4MjQ0YTJiOWFhMmJmYmM0NTU3ZmUzIiwidXNlcl9pZCI6MX0.blVRyW-8A-12CnXHtQNZralM2J5MAL_WGpU_thWAmC4
+
+{
+    "start": "2024-03-30T16:54:12.619344Z",
+    "end": "2024-03-30T18:54:12.619344Z"
+}
+
+###
