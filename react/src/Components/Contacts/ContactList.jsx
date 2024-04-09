@@ -50,7 +50,7 @@ class ContactList extends Component {
             </tr>
           ) : (
             contactsData.map(contact => (
-              <tr key={contact.pk}>
+              <tr key={contact.id}>
                 <td>{contact.contact_user}</td>
                 <td>{contact.name}</td>
                 <td>{contact.email}</td>
@@ -62,7 +62,7 @@ class ContactList extends Component {
                   />
                   &nbsp;&nbsp;
                   <DeleteContactModal
-                    pk={contact.pk}
+                    id={contact.id}
                     resetState={this.props.resetState}
                   />
                 </td>
